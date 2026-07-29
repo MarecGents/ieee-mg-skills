@@ -169,7 +169,6 @@ conjugate transpose operations, respectively. E{·} denotes the expectation oper
 
 ## 三、文献综述段内部句级过渡多样化
 
-> 基于 sandbox/dev/ieee-mg-database/introduction-lit-flow-guide.md 蒸馏。专门针对 Layer 3（文献综述段）密集引用场景。
 > 核心目标：消除“单词过渡词综合征”，让文献综述读起来是流畅叙述而非清单罗列。
 
 ### 3.1 七种过渡手法库（压缩版）

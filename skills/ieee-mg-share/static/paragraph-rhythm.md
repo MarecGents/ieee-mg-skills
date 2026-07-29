@@ -50,7 +50,6 @@ of signals from a large set of users to the BS...
 
 ## 4. 段落内部句间过渡多样化
 
-> 基于 sandbox/dev/ieee-mg-database/introduction-lit-flow-guide.md 蒸馏。专门针对 Introduction Layer 3（文献综述段）内部密集引用场景。
 > **核心目标**：消除"单词过渡词综合征"，让文献综述段落读起来是流畅叙述而非清单罗列。
 
 ### 4.1 问题定义：单词过渡词综合征
