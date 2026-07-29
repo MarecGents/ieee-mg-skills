@@ -1,0 +1,56 @@
+# ieee-mg-reviewer manifest
+
+skill: ieee-mg-reviewer
+version: 1.0.0
+
+axes:
+  - name: scope
+    description: 审核范围
+    values:
+      - id: full
+        description: 全文审核
+        aliases: [full, entire, whole, all, 全文]
+      - id: abstract
+        description: 仅摘要
+        aliases: [abstract, summary, 摘要]
+      - id: introduction
+        description: 仅引言
+        aliases: [introduction, intro, 引言]
+      - id: motivation
+        description: 仅动机部分
+        aliases: [motivation, 动机]
+      - id: results
+        description: 仅仿真结果
+        aliases: [results, simulation, 仿真]
+      - id: conclusion
+        description: 仅结论
+        aliases: [conclusion, 结论]
+
+  - name: severity
+    description: 审核严格度
+    values:
+      - id: strict
+        description: 严格执行所有规范
+        aliases: [strict, rigorous, 严格]
+      - id: normal
+        description: 仅报告中等及以上问题
+        aliases: [normal, standard, 标准]
+      - id: light
+        description: 仅报告严重问题
+        aliases: [light, gentle, 宽松]
+
+fragments:
+  core: static/core.md
+  workflow: static/workflow.md
+  report-template: static/report-template.md
+  checks:
+    abstract: static/check-abstract.md
+    introduction: static/check-introduction.md
+    motivation: static/check-motivation.md
+    system-model: static/check-system-model.md
+    results: static/check-results.md
+    conclusion: static/check-conclusion.md
+
+load_rules:
+  always: [core, workflow, report-template]
+  on_scope: checks

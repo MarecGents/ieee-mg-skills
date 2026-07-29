@@ -1,0 +1,37 @@
+# ieee-mg-citation manifest
+# 定义轴（axes）和片段（fragments）的映射关系
+
+skill: ieee-mg-citation
+version: 0.1.0
+
+axes:
+  - name: scope
+    description: 引用任务范围
+    values:
+      - id: full
+        description: 全文引用管理
+        aliases: [full, entire, whole, 全文]
+      - id: single
+        description: 单条引用校验
+        aliases: [single, one, item, 单条, 单个]
+      - id: convert
+        description: 引用格式转换
+        aliases: [convert, transform, format, 转换]
+
+  - name: language
+    description: 输出语言
+    values:
+      - id: en
+        description: 英语
+        aliases: [english, en, 英文]
+      - id: zh
+        description: 中文
+        aliases: [chinese, zh, 中文]
+
+fragments:
+  core: static/core.md
+  workflow: static/workflow.md
+
+load_rules:
+  always: [core]
+  on_demand: [workflow, references/]
