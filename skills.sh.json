@@ -1,0 +1,18 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Academic Writing",
+      "description": "Skills for IEEE-compliant academic paper writing, polishing, and reviewing.",
+      "skills": [
+        "ieee-mg-writing",
+        "ieee-mg-polishing",
+        "ieee-mg-reviewer",
+        "ieee-mg-citation",
+        "ieee-mg-database",
+        "ieee-mg-share"
+      ]
+    }
+  ]
+}
