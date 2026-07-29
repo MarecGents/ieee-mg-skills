@@ -18,6 +18,7 @@
 - [ ] 11. 引用句式是否多样（避免重复 "the authors in [x] investigated"）
 - [ ] 12. 时态是否正确（背景现在时，已有工作过去时）
 - [ ] 13. 是否有符号说明段落（如含大量数学符号）
+- [ ] 17. 文献综述内部过渡手法是否多样化（避免 ≥3 句连续以单词过渡词 Meanwhile/Furthermore/Additionally/Moreover 开头）
 
 ## 格式性检查
 - [ ] 14. 文献引用是否全是编号格式 [x]
@@ -32,3 +33,4 @@
 | 文献综述未分类 | 🟡 |
 | 无论文组织段落 | 🟡 |
 | 引用格式不统一 | 🟡 |
+| 过度使用单词过渡词（Meanwhile→Furthermore→Moreover→In addition 连锁） | 🟡 |

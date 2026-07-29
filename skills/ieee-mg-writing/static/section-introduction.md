@@ -165,7 +165,32 @@ conjugate transpose operations, respectively. E{·} denotes the expectation oper
 
 ---
 
-## 三、引言写作检查清单
+---
+
+## 三、文献综述段内部句级过渡多样化
+
+> 基于 sandbox/dev/ieee-mg-database/introduction-lit-flow-guide.md 蒸馏。专门针对 Layer 3（文献综述段）密集引用场景。
+> 核心目标：消除“单词过渡词综合征”，让文献综述读起来是流畅叙述而非清单罗列。
+
+### 3.1 七种过渡手法库（压缩版）
+
+| 手法 | 力度 | 示例 | 适用场景 |
+|-----------|:---------:|-----------|-----------------|
+| **自然承接（无过渡）** | 轻 | The authors of \\cite{...} proposed... | 同一子主题内连续引用 |
+| **主题引导短语** | 中 | To exploit spatial degrees of freedom, | 子主题切换 |
+| **引用开头** | 中 | In \\cite{...}, the authors... | 单篇重要文献聚焦 |
+| **同位语嵌入强调** | 重 | A critical yet previously overlooked factor—X—was... | 特殊贡献强调 |
+| **场景引导短语** | 中 | For downlink scenarios, / In the context of... | 切换应用场景 |
+| **分词短语引导** | 中 | Going beyond..., / Extending this direction, | 拓展到新领域 |
+| **收束总结词** | 轻 | Collectively, / Together, / Overall, | 段落末句收束 |
+
+### 3.2 手法选择三原则
+
+1. **同种手法不邻**：相邻两句不使用同一种过渡手法。
+2. **子主题内部承接，切换时引导**：同一子主题内多篇文献用自然承接，切换子主题时用主题引导短语。
+3. **特殊贡献用同位语嵌入**：首次提出或关键转折点，不要用 Notably 一带而过，改为同位语嵌入主语中。
+
+## 四、引言写作检查清单
 
 ### Layer 1-2 检查
 - [ ] 背景是否有足够的广度和领域相关性
@@ -177,6 +202,8 @@ conjugate transpose operations, respectively. E{·} denotes the expectation oper
 - [ ] 每类是否覆盖了关键文献（3-5 篇/类）
 - [ ] 是否包含最新研究（近 2-3 年）
 - [ ] 对已有工作的评述是否客观，避免过度批评
+
+- [ ] 文献综述段内部过渡手法是否多样化（避免 ≥3 句连续单词过渡词）
 
 ### Layer 4 检查
 - [ ] 研究空白是否明确具体
@@ -196,9 +223,9 @@ conjugate transpose operations, respectively. E{·} denotes the expectation oper
 - [ ] 段落之间是否有自然的过渡和连接
 - [ ] 引言长度是否适当（通常为全文 15-25%）
 
-## 四、第一轮蒸馏补充（语料发现的新模式）
+## 五、第一轮蒸馏补充（语料发现的新模式）
 
-### 4.1 文献综述嵌套子节结构（缺失7）
+### 5.1 文献综述嵌套子节结构（缺失7）
 在Layer 3中新增嵌套结构：
 ```
 ### A. Previous Works
@@ -208,16 +235,16 @@ conjugate transpose operations, respectively. E{·} denotes the expectation oper
 ```
 约60%的论文在Layer 3内部采用此结构。每个子节内混合使用 "The authors in [x]" 和 "In [x]" 两种引用格式。
 
-### 4.2 技术演进段落高密度引用（缺失10）
+### 5.2 技术演进段落高密度引用（缺失10）
 Layer 2段落保持高引用密度：每句至少1个引用，关键句可叠加2-3个引用。引用群格式 [1]-[5] 或 [1],[2],[3]。段落整体引用数建议8-15个。
 
-### 4.3 引用句式变体（缺失8）
+### 5.3 引用句式变体（缺失8）
 新增引用句式：
 - "In [x], the authors proposed/investigated..."（文献编号开头）
 - "A seminal work proposed X [x]."（开创性工作）
 - "X was studied/analyzed/investigated in [x]."（被动语态）
 
-### 4.4 符号说明段落呈现方式（缺失9）
+### 5.4 符号说明段落呈现方式（缺失9）
 在Layer 5中补充符号说明的三种风格：
 1. "Notations: Scalars, vectors, and matrices..."（标准版，模板已有）
 2. "The key notations in this paper are presented as follows..."（关键词版）

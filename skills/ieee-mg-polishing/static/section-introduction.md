@@ -10,6 +10,7 @@
 5. **贡献列表格式**：1)2)3)4) 编号是否正确
 6. **研究空白句式**："To the best of our knowledge" 的准确使用
 7. **符号说明段落**：如有大量数学符号，应包含 Notations 段落
+8. **过渡手法多样化**：文献综述段内部避免连续 ≥3 句以 Meanwhile/Furthermore/Additionally/Moreover/Notably/In addition/Besides 等单词过渡词开头，交替使用自然承接、主题引导短语、引用开头、同位语嵌入等手法。详见 ieee-mg-share/static/paragraph-rhythm.md 第 4 节。
 
 ## 二、常见问题案例库
 
@@ -28,6 +29,12 @@
 ### Q4：缺少研究空白
 ❌ 直接从文献综述跳到贡献列表
 ✅ 添加 "To the best of our knowledge, X has not been comprehensively explored in prior works."
+
+### Q5：单词过渡词综合征
+❌ "Meanwhile, in [x], the authors investigated... Furthermore, the authors of [y] proposed... Additionally, a framework [z] was developed... Moreover, a hybrid architecture [w] was introduced..."
+✅ "The channel characteristics were initially analyzed in [x]. To exploit spatial degrees of freedom, the authors of [y] proposed a novel scheme. At the system architecture level, a hybrid architecture [w] was introduced."
+
+**诊断**：段落中 ≥3 句连续以递进/补充类单词过渡词开头，形成机械清单式叙述。应交替使用主题引导短语、自然承接、引用开头等手法（详见 paragraph-rhythm.md 第 4 节）。
 
 ## 三、润色前后对比
 
@@ -48,6 +55,8 @@
   │   └─ 否 → 补充关键引用 (moderate)
   ├─ Layer 3: 文献综述是否按主题分类？
   │   └─ 否 → 重新组织文献引用 (moderate)
+  ├─ Layer 3: 文献综述段内部过渡手法是否多样化（避免 ≥3 句连续单词过渡词）？
+  │   └─ 否 → 重写过渡，交替使用自然承接/主题引导短语/引用开头/同位语嵌入 (moderate)
   ├─ Layer 3: 是否使用嵌套子节结构（### A/B/C + 编号1)2)3)）？
   │   └─ 否 → 建议使用嵌套分类 (moderate)
   ├─ Layer 4: 是否有 "To the best of our knowledge" 空白句？
@@ -68,3 +77,4 @@
 - [ ] 文献引用是否全是 IEEE 编号格式 [x], [x]-[y]
 - [ ] 每个首次引用的缩略语是否已定义
 - [ ] 论文组织段落是否存在（"The rest of this paper is organized..."）
+- [ ] 文献综述段内部过渡手法是否多样化（避免 ≥3 句连续单词过渡词）
