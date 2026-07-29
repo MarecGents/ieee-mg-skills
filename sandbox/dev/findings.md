@@ -49,3 +49,41 @@
 23. **"Firstly... Secondly... Finally"顺序词串联**
 24. **实际应用场景落点** — "From the perspective of practical applicability..."
 25. **"It has been shown that..."确认性被动句式**
+
+---
+
+# 第二轮蒸馏对比发现（2026-07-15）
+
+> 基于交叉一致性审计 + 语料深度重读的新增发现。
+
+## Abstract 新增发现（6项）
+
+| 编号 | 缺失 | 描述 | 状态 |
+|:----:|------|------|:----:|
+| 26 | "More specifically"过渡词 | 语料中"More specifically"频率远高于"Specifically"，建议优先使用 | ✅ 已补充 |
+| 27 | 结果引出词变体库 | 补充"The simulation findings are presented to demonstrate"等4种变体 | ✅ 已补充 |
+| 28 | "manifest that"引出词 | 语气比"show"更强，适用于强调发现确凿性 | ✅ 已补充 |
+| 29 | 总起句"yield the following insights" | 语料中出现"yields/yield"混用，建议统一"yield" | ✅ 已补充 |
+| 30 | "On top of these"递进过渡 | 在已有分析基础上进一步推导的过渡词 | ✅ 已补充 |
+| 31 | "precede that of"比较动词 | 作为 outperform/exceed/superior to 的补充变体 | ✅ 已补充 |
+
+## 交叉一致性审计修复（2026-07-15）
+
+### Reviewer 检查项补充（8项）
+| 编号 | 章节 | 补充内容 | 状态 |
+|:----:|:----:|----------|:----:|
+| R1 | Abstract | 检查项1放宽，支持让步转折句式 | ✅ 已修复 |
+| R2 | Results | 补充多因一释检查（"Another reason is that"） | ✅ 已修复 |
+| R3 | Results | 补充 trade-off 权衡表达检查 | ✅ 已修复 |
+| R4 | Results | 补充双面论证检查 | ✅ 已修复 |
+| R5 | Results | 补充子图联合分析检查 | ✅ 已修复 |
+| R6 | Conclusion | 补充顺序词串联检查 | ✅ 已修复 |
+| R7 | Conclusion | 补充实际应用落点检查 | ✅ 已修复 |
+| R8 | Conclusion | 补充被动确认句式检查 | ✅ 已修复 |
+
+### Polishing 同步更新摘要
+- **section-abstract**: 决策树新增让步句式/总-分展开/总起句/词数范围 + 批量检查新增6项规则
+- **section-introduction**: 润色重点从4项扩至7项，决策树从6分支扩至9分支
+- **section-motivation**: 润色重点从3项扩至6项，新增Q4/Q5案例，决策树从5分支扩至7分支
+- **section-numerical-results**: 润色重点从4项扩至10项，新增Q5/Q6案例，决策树从6分支扩至10分支
+- **section-conclusion**: 新增润色重点6项，决策树从4分支扩至8分支

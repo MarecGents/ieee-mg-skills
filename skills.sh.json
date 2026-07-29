@@ -4,14 +4,32 @@
   "groupings": [
     {
       "title": "Academic Writing",
-      "description": "Skills for IEEE-compliant academic paper writing, polishing, and reviewing.",
+      "description": "Skills for IEEE-compliant academic paper writing, polishing, and reviewing — tailored for B5G/6G wireless communications, NOMA, RIS/STARS research.",
       "skills": [
-        "ieee-mg-writing",
-        "ieee-mg-polishing",
-        "ieee-mg-reviewer",
-        "ieee-mg-citation",
-        "ieee-mg-database",
-        "ieee-mg-share"
+        {
+          "id": "ieee-mg-writing",
+          "description": "IEEE Trans 风格学术写作 — 6章节逐节模板（Abstract/Introduction/Motivation/System Model/Results/Conclusion），从21篇真实 IEEE Trans 论文语料深度蒸馏"
+        },
+        {
+          "id": "ieee-mg-polishing",
+          "description": "IEEE Trans 风格学术润色 — 支持 light/moderate/deep 三级润色深度，含章节感知的纠错规则、案例库和风格决策树"
+        },
+        {
+          "id": "ieee-mg-reviewer",
+          "description": "IEEE Trans 风格论文审核 — 多角度审稿模拟，生成带严重性标签的逐句问题标注和重构建议报告"
+        },
+        {
+          "id": "ieee-mg-citation",
+          "description": "IEEE 引用格式管理 — 引用格式校验、BibTeX导出（开发中）"
+        },
+        {
+          "id": "ieee-mg-database",
+          "description": "课题组论文语料库 — 21篇 B5G/6G/NOMA/RIS 方向 IEEE Trans 论文的章节拆分语料"
+        },
+        {
+          "id": "ieee-mg-share",
+          "description": "课题组共享风格层 — 风格画像、术语规范、句式库、逻辑连接词指南，被 writing/polishing/reviewer 共同引用"
+        }
       ]
     }
   ]
