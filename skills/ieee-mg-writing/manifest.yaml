@@ -2,7 +2,7 @@
 # 定义轴（axes）和片段（fragments）的映射关系
 
 skill: ieee-mg-writing
-version: 1.0.0
+version: 1.1.0
 
 axes:
   - name: paper_type
@@ -65,4 +65,3 @@ fragments:
 load_rules:
   always: [core, workflow]
   on_section: sections
-  on_demand: references/

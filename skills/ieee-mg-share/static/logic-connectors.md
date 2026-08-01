@@ -20,7 +20,7 @@
 |--------|----------|----------|------|
 | **however** | ★★★★★ | 句首转折，引出相反观点 | "However, the unique advantages offered by ASTARS remain underutilized in FL scenarios." |
 | **nevertheless** | ★★★ | 正式转折，让步之后 | "Nevertheless, the massive influx of users will lead to QoS degradation." |
-| **although** | ★★★★ | 从句开头，让步 | "Although X has been studied, the integration of X and Y remains unexplored." |
+| **although** | ★★★★ | 从句开头，让步 | "Although X has been studied, the integration of X and Y is still in their infancy." |
 | **whereas** | ★★★ | 并列对比两个事实 | "The n-th user with pSIC can attain diversity order of nK, whereas the m-th user obtains nM." |
 | **while** | ★★★★★ | 多种功能（转折/时间/对比） | "While the aforementioned works have laid a solid foundation, ASTARS-FL remains emerging." |
 | **in contrast** | ★★★ | 强烈的对比对照 | "In contrast, the proposed ASTARS-SCA-FL has outperformed other ASTARS variants." |

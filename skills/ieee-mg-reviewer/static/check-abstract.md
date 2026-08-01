@@ -2,13 +2,13 @@
 
 > 基于 ieee-mg-writing/static/section-abstract.md 的逐项检查。
 
-## 结构性检查（15项）
-- [ ] 1. 首句是否为主动语态开头（"This paper investigates/proposes"），或使用让步-转折结构（"Although... + To address these issues"）
+## 结构性检查（10项）
+- [ ] 1. 首句是否属于语料高频模式（约 40% 为 "This paper investigates/proposes"；技术主语式 "X has attracted growing interest..."；或让步-转折结构 "Although... + To address these issues"）
 - [ ] 2. 是否包含背景句（领域重要性）
 - [ ] 3. 是否包含问题/动机句（已有工作不足）
 - [ ] 4. 是否包含方法句（we propose/derive/formulate）
 - [ ] 5. 是否包含结果句（Numerical results show）
-- [ ] 6. 结果是否以 (i)(ii)(iii) 或 1)2)3) 编号
+- [ ] 6. 结果是否以 i)/1) 无括号编号
 - [ ] 7. 编号结果是否包含≥2条
 - [ ] 8. 词数是否在 100-250 范围内
 - [ ] 9. 句数是否在 5-12 范围内

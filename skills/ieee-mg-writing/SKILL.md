@@ -6,7 +6,7 @@ description: >
   - Abstract / Introduction / Motivation / System Model / Numerical Results / Conclusion
   当用户提到"写论文"、"写摘要"、"写引言"、"写方法"、"写仿真结果"、"写结论"等时触发。
   特别适用于 IEEE 期刊/会议论文的初稿撰写。
-version: 1.0.0
+version: 1.1.0
 author: MarecGents Group
 ---
 
@@ -22,8 +22,7 @@ author: MarecGents Group
 | **核心层** | `static/core.md` — 写作核则 | 始终加载 |
 | **工作流层** | `static/workflow.md` — 标准写作流程 | 始终加载 |
 | **章节层** | `static/section-*.md` — 各章节专项模板 | 按检测的 `section` 轴加载 |
-| **参考层** | `references/` — 按需参考资料 | 仅当用户明确要求或需要参考时加载 |
-| **脚本层** | `scripts/` — 辅助脚本 | 按需调用 |
+
 
 ## 路由协议
 
@@ -64,10 +63,10 @@ author: MarecGents Group
 1. **核心原则**（`core.md`）优先 —— 所有写作必须符合核心原则
 2. **章节模板**（`section-*.md`）其次 —— 遵循该章节的结构和风格
 3. **用户具体要求** —— 在模板基础上满足用户的定制需求
-4. **课题组风格** —— 从 `ieee-mg-database/` 中提取的风格特征（如可用）
+4. **课题组风格** —— 从课题组语料库 `sandbox/dev/ieee-mg-database/` 中提取的风格特征（如可用）
 
 ### Step 5：按需取用参考
-如果写作过程中需要参考外部资料（如引用格式、术语表），从 `references/` 或 `ieee-mg-database/` 中取用。不要随意编造参考文献信息。
+如果写作过程中需要参考外部资料（如引用格式、术语表），从 `../ieee-mg-share/static/` 或课题组语料库 `sandbox/dev/ieee-mg-database/` 中取用。不要随意编造参考文献信息。
 
 ## 边界说明
 

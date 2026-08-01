@@ -1,7 +1,7 @@
 # 常见表达错误与纠正表
 
 > 从课题组 21 篇论文语料中提取的反复出现的小错误。供 writing 避坑和 polishing 纠错参考。
-> 被 ieee-mg-writing 和 ieee-mg-polishing 共同引用。
+> 被 ieee-mg-polishing 引用。
 
 ## 1. 冠词错误
 

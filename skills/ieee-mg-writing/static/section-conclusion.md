@@ -7,22 +7,36 @@
 
 ### 要素 1：开头句（必含）
 
-**标准开头句式（语料中出现率 100%，使用现在完成时）：**
-```
-In this paper, we have investigated [研究对象] and [方法/系统].
-```
-或
-```
-This paper has investigated/studied [研究对象] in [场景].
-```
+**开头句式（语料实测分布，21 篇）：** 语料中不存在 "In this paper, we have investigated" 这一精确开头。实际开头以被动完成时回顾与 "This paper has + 过去分词" 两型主导：
 
-**常用动词搭配（语料统计）：**
-| 动词 | 频次 | 示例 |
-|------|------|------|
-| have investigated | ★★★★★ | "In this paper, we have investigated the feasibility of ASTARS uplink network..." |
-| have studied | ★★★★ | "In this paper, the covert performance of ASTARS-NOMA networks was studied..." |
-| has been investigated | ★★★ | "In this paper, the physical layer security of ARIS-NOMA has been discussed..." |
-| have provided | ★★ | "In this paper, we have provided both theoretical insights and practical guidelines..." |
+**模式 1（最常见，约 48%）：被动完成时回顾**
+```
+In this paper, the [研究对象] has/have been investigated/studied/discussed [补语].
+```
+- "In this paper, the covert performance of ASTARS-NOMA networks was studied, where both reflection and transmission warden scenarios were taken into account."
+- "In this paper, the secrecy performance of RIS-AmBC networks has been investigated in detail."
+
+**模式 2（约 29%）：主语主动完成时**
+```
+This paper has investigated/studied [研究对象] [补语].
+```
+- "This paper has investigated the feasibility of the ASTARS uplink network utilizing OTA computing..."
+- "This paper has studied the performance of RIS-TWR-NOMA networks, where a pair of users are able to exchange their information with the aid of a RIS."
+
+**模式 3（约 10%）：第一人称一般过去时**
+```
+In this paper, we investigated/provided [研究对象].
+```
+- "In this paper, we investigated the outage probability of STARS-SGF-NOMA network with randomly distributed users."
+- "In this paper, we provided both theoretical insights and practical guidelines for analyzing the physical layer secrecy of MF-RIS-assisted NOMA networks..."
+
+**模式 4（约 14%）：This article 变体**
+```
+In this article, we have studied [研究对象] / the [研究对象] has been studied / [系统] are proposed ...
+```
+- "In this article, we have studied the novel ASTARS-NOMA networks with uniformly distributed paring users..."
+
+**时态说明**：现在完成时在句中回顾具体动作时使用（"we have derived/investigated" 等，语料 9 处）；开头句本身以被动完成时（模式 1）与 "This paper has + 过去分词"（模式 2）为主。
 
 ### 要素 2：工作回顾（2-3 句）
 
@@ -103,7 +117,7 @@ design insights, which is one promising future research direction.
 5. **与 Abstract 呼应但不同**：Abstract 用现在时，Conclusion 用现在完成时
 
 ## 三、写作检查清单
-- [ ] 是否以 "In this paper, we have investigated..." 开头
+- [ ] 开头是否属于语料高频句式（"This paper has investigated/studied..." 或 "In this paper, the ... has been investigated..."）
 - [ ] 时态是否正确（现在完成时回顾工作）
 - [ ] 是否回顾了核心工作（做了什么）
 - [ ] 是否总结了主要发现（发现了什么，含数值）

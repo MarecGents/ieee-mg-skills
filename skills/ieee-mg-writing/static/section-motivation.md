@@ -29,11 +29,12 @@ in terms of [指标1] and [指标2], the [问题] inherent to [技术A] cannot b
 
 ### 要素 2：研究空白定位（1-2 句）
 
-**核心句式（语料中出现率 95%+）：**
+**核心句式（语料实测，"To the best of our knowledge" 引出空白）：**
+语料中不存在 "has not been comprehensively explored"；主流为 "there is/are no ..." 系：
 ```
-To the best of our knowledge, [研究空白] has not been comprehensively explored 
-in prior works / existing literature.
+To the best of our knowledge, there is/are no [已有工作] to investigate/consider [研究空白].
 ```
+辅以 "is not researched yet"、"this paper is the first to conduct" 等变体（见 4.2）。
 
 **空白定位三要素：**
 1. **已有研究做了什么** — "Prior research has addressed..."
@@ -42,11 +43,9 @@ in prior works / existing literature.
 
 ### 要素 3：尖锐问题引导（可选，约 30%）
 ```
-This paper aims to explore [topic] by seeking answers to these questions:
-- Question 1: How does [核心问题] affect [性能]?
-- Question 2: When comparing [A] and [B], which factor poses a greater risk to [目标]?
-- Question 3: What are the disparities in [性能] across [不同场景]?
+[直接问句 1]? [直接问句 2]? This paper aims to answer these questions by [方案].
 ```
+- "Will NOMA relaying bring performance gains compared to HD NOMA relaying? If yes, what is the condition?"（语料原文）
 
 问题的三个设计原则：
 1. **每个问题对应一个贡献点**
@@ -147,7 +146,7 @@ OUR CONTRIBUTIONS IN CONTRAST TO THE STATE-OF-THE-ART
 - "To the best of our knowledge, there are no existing works to investigate X."
 - "To the best of our knowledge, there is no existing work investigating X."
 - "This paper presents the first comprehensive analysis of X."
-- "X remains an emerging area of study / is still in its infancy."
+- "X remains an emerging area of study / is still in their infancy."
 
 ### 4.3 尖锐问题-贡献点映射规则（缺失13）
 设计原则：问题与贡献一一对应

@@ -20,7 +20,7 @@
 
 | 句式模板 | 使用时机 |
 |----------|----------|
-| "To the best of our knowledge, [缺口] has not been comprehensively explored in prior works." | 标准空白声明 |
+| "To the best of our knowledge, there is/are no [已有工作] to investigate [缺口]." | 标准空白声明（语料主流，约70%） |
 | "However, the unique advantages offered by X remain underutilized in Y scenarios." | 技术未充分利用 |
 | "While the aforementioned works have laid a solid foundation for X, [新问题] remains an emerging area of study." | 引出新方向 |
 | "Although X has been studied, the integration of X and Y is still in its infancy." | 交叉领域空白 |

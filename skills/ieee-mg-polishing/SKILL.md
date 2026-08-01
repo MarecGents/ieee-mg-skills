@@ -6,7 +6,7 @@ description: >
   - Abstract / Introduction / Motivation / System Model / Numerical Results / Conclusion
   也支持全文整体润色和投稿前的终稿审校。
   当用户提到"润色"、"修改语言"、"改进表达"、"polish"、"proofread"、"审校"等时触发。
-version: 1.0.0
+version: 1.1.0
 author: MarecGents Group
 ---
 
@@ -22,8 +22,7 @@ author: MarecGents Group
 | **核心层** | `static/core.md` — 润色核心原则 | 始终加载 |
 | **工作流层** | `static/workflow.md` — 标准润色流程 | 始终加载 |
 | **章节层** | `static/section-*.md` — 各章节润色规范 | 按检测的 `section` 轴加载 |
-| **参考层** | `references/` — 按需参考资料 | 仅当需要时加载 |
-| **脚本层** | `scripts/` — 辅助脚本 | 按需调用 |
+
 
 ## 路由协议
 
@@ -67,7 +66,7 @@ author: MarecGents Group
 1. **核心原则**（`core.md`）优先 —— 所有润色必须符合核心原则
 2. **章节规范**（`section-*.md`）其次 —— 遵循该章节的润色重点
 3. **用户具体指示** —— 在规范基础上满足用户的特殊要求
-4. **课题组风格** —— 从 `ieee-mg-database/` 中提取的风格特征（如可用）
+4. **课题组风格** —— 从课题组语料库 `sandbox/dev/ieee-mg-database/` 中提取的风格特征（如可用）
 
 ### Step 5：输出润色结果
 输出格式：

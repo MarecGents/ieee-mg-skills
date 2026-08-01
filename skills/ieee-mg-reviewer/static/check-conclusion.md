@@ -1,6 +1,6 @@
 # Conclusion 审核清单
 
-- [ ] 1. 是否以 "In this paper, we have investigated..." 开头（现在完成时）
+- [ ] 1. 开头是否使用语料高频句式（"This paper has investigated/studied..." 或 "In this paper, the ... has/have been investigated..."）
 - [ ] 2. 时态是否正确（现在完成时回顾工作）
 - [ ] 3. 是否总结了核心工作（做了什么）
 - [ ] 4. 是否总结了主要发现（发现了什么，含数值）
@@ -17,7 +17,7 @@
 ## 常见致命问题
 | 问题 | 严重性 |
 |------|:------:|
-| 时态错误（用过去时） | 🔴 |
+| 时态混用（同一句内完成时与一般现在时/过去时切换） | 🔴 |
 | 完全复制 Abstract | 🟡 |
 | 无未来工作 | 🟡 |
 | 引入新引用 | 🔴 |

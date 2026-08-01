@@ -2,7 +2,7 @@
 # 定义轴（axes）和片段（fragments）的映射关系
 
 skill: ieee-mg-polishing
-version: 1.0.0
+version: 1.1.0
 
 axes:
   - name: paper_type
@@ -35,7 +35,7 @@ axes:
         aliases: [motivation, related work, 动机]
       - id: system-model
         description: 系统模型润色
-        aliases: [system model, system model, model, 系统模型]
+        aliases: [system model, model, 系统模型]
       - id: numerical-results
         description: 数值结果润色
         aliases: [numerical results, simulation, results, 数值结果, 仿真]
@@ -64,7 +64,7 @@ axes:
         aliases: [moderate, normal, standard, 中度, 中等]
       - id: deep
         description: 深度润色（全面优化风格和表达）
-        aliases: [deep, heavy, full, major, 深度, 全面]
+        aliases: [deep, heavy, major, 深度, 全面]
 
 fragments:
   core: static/core.md
@@ -81,4 +81,3 @@ fragments:
 load_rules:
   always: [core, workflow]
   on_section: sections
-  on_demand: references/

@@ -4,7 +4,7 @@ description: >
   IEEE Transactions 风格论文审核技能。基于 ieee-mg-share/writing/polishing 的课题组写作规范，
   审核一篇论文是否符合课题组风格。生成详细的 Review Report，逐句标注问题和重构建议。
   当用户提到"审核"、"review"、"检查论文"、"审稿"、"是否符合风格"、"写作问题"等时触发。
-version: 1.0.0
+version: 1.1.0
 author: MarecGents Group
 ---
 
@@ -14,7 +14,7 @@ author: MarecGents Group
 
 | 层级 | 内容 | 加载时机 |
 |------|------|----------|
-| **共享层** | `../ieee-mg-share/static/` 全部规范 — 风格基准 | 始终加载 |
+| **共享层** | `../ieee-mg-share/static/style-profile.md` + `terminology.md` — 风格基准 | 始终加载 |
 | **核心层** | `static/core.md` — 审核核心原则 | 始终加载 |
 | **工作流层** | `static/workflow.md` + `static/report-template.md` | 始终加载 |
 | **章节层** | `static/check-*.md` — 各章节审核清单 | 按审核范围加载 |
@@ -28,7 +28,7 @@ author: MarecGents Group
 加载 `static/core.md` 和 `static/workflow.md`，建立审核框架。
 
 ### Step 2：确定审核范围
-检测用户提供的论文范围（全文/特定章节）。
+检测用户提供的论文范围（全文/特定章节，含 system-model），并检测审核报告语言（language 轴：en / zh，默认 en）。
 
 ### Step 3：逐章审核
 按照 `static/check-*.md` 的清单，逐章审核并标记问题。每个问题标注：

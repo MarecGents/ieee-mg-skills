@@ -12,12 +12,12 @@
 按照各 check-*.md 清单逐章检查：
 
 ```
-check-abstract.md      → 检查摘要的5要素和编号结果
-check-introduction.md  → 检查引言的5层架构和贡献列表
-check-motivation.md    → 检查动机的While开头和4点贡献
+check-abstract.md      → 检查摘要的5要素、编号结果和开头模式
+check-introduction.md  → 检查引言的5层架构、贡献列表和过渡手法
+check-motivation.md    → 检查动机的While开头、4点贡献和空白句式
 check-system-model.md → 检查模型符号一致性和逻辑链
-check-results.md      → 检查仿真参数表和三段式分析
-check-conclusion.md   → 检查结论时态和未来工作
+check-results.md      → 检查仿真参数表、三段式分析、多因一释、trade-off、双面论证、子图联合分析
+check-conclusion.md   → 检查结论时态、未来工作、顺序词串联、实际应用落点、被动确认句式
 ```
 
 ### Step 3：全局检查

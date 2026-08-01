@@ -1,7 +1,7 @@
 # ieee-mg-reviewer manifest
 
 skill: ieee-mg-reviewer
-version: 1.0.0
+version: 1.1.0
 
 axes:
   - name: scope
@@ -19,12 +19,25 @@ axes:
       - id: motivation
         description: 仅动机部分
         aliases: [motivation, 动机]
+      - id: system-model
+        description: 仅系统模型
+        aliases: [system model, model, 系统模型]
       - id: results
         description: 仅仿真结果
         aliases: [results, simulation, 仿真]
       - id: conclusion
         description: 仅结论
         aliases: [conclusion, 结论]
+
+  - name: language
+    description: 审核报告语言
+    values:
+      - id: en
+        description: 英语
+        aliases: [english, en, 英文]
+      - id: zh
+        description: 中文
+        aliases: [chinese, zh, 中文]
 
   - name: severity
     description: 审核严格度

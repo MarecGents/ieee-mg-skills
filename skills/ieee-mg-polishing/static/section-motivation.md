@@ -6,7 +6,7 @@
 1. **论证力度**：从已有工作到研究空白的过渡是否有说服力
 2. **贡献点三层递进**：每个贡献点应包含 动作层→工具层→结论层
 3. **贡献句式**：4个贡献点是否覆盖提出→推导→分析→验证
-4. **研究空白变体**：检查是否使用了多种空白句式（"there are no existing works" / "remains unexplored" / "is still in its infancy"）
+4. **研究空白变体**：检查是否使用了多种空白句式（"there is/are no existing works" / "is not researched yet" / "is still in its infancy"）
 5. **尖锐问题映射**：如有问题列表，每个问题是否与贡献点一一对应
 6. **对比表格**：Table I 格式和内容完整性（特征行建议覆盖5个维度）
 
@@ -25,8 +25,8 @@
 ✅ "1) We propose a new scheme. Analytical results show that the diversity order is proportional to the number of elements."
 
 ### Q4：研究空白句式单一
-❌ 始终重复 "To the best of our knowledge, X has not been comprehensively explored"
-✅ 交替使用 "there are no existing works to investigate X"、"X remains an emerging area of study"、"This paper presents the first comprehensive analysis of X"
+❌ 每篇都用同一种空白句式（如 "there is no existing work investigating X" 连续使用）
+✅ 交替使用 "there is/are no existing works to investigate X"、"X is not researched yet"、"This paper presents the first comprehensive analysis of X"（均为语料实测句式）
 
 ### Q5：问题-贡献不匹配
 ❌ 问题列表和贡献点没有对应关系
@@ -35,7 +35,7 @@
 ## 润色前后对比
 
 **Before**: "X has been studied by many works. We propose a new method. We also derive some expressions."
-**After**: "While X has been extensively studied, the integration of X and Y remains unexplored. To the best of our knowledge, this paper presents the first analysis of... The main contributions are: 1) We propose... 2) We derive... 3) We investigate... 4) We demonstrate..."
+**After**: "While X has been extensively studied, the integration of X and Y is still in their infancy. To the best of our knowledge, this paper presents the first analysis of... The main contributions are: 1) We propose... 2) We derive... 3) We investigate... 4) We demonstrate..."
 
 ## 润色决策树
 ```

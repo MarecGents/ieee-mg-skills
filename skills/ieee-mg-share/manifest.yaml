@@ -2,7 +2,7 @@
 # 共享轴定义 — 被 ieee-mg-writing 和 ieee-mg-polishing 共同引用
 
 skill: ieee-mg-share
-version: 1.0.0
+version: 1.1.0
 
 axes:
   - name: paper_type
@@ -56,6 +56,9 @@ fragments:
   expression-bank: static/expression-bank.md
   logic-connectors: static/logic-connectors.md
   section-architecture: static/section-architecture.md
+  common-errors: static/common-errors.md
+  paragraph-rhythm: static/paragraph-rhythm.md
+  quantitative-baseline: static/quantitative-baseline.md
 
 load_rules:
   always: []

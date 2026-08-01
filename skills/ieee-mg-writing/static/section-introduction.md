@@ -74,14 +74,19 @@
 | **正面介绍** | "The authors in [x] proposed/investigated..." | "The authors in [15] proposed an adaptive FL algorithm..." |
 | **归类引用** | "Prior works have demonstrated..." | "Prior works have demonstrated that RIS can reduce errors..." |
 | **研究现状** | "X has been extensively studied..." | "X has been extensively studied in the context of Y..." |
-| **过渡到空白** | "However, ... remains unexplored" | "However, the integration of X in Y remains unexplored" |
+| **过渡到空白** | "However, ... is not researched yet" | "However, the integration of X in Y is not researched yet" |
 
 ### Layer 4：研究空白 & 动机（1-2 段）
 
-**研究空白声明核心句式（语料中出现率 100%）：**
+**研究空白声明句式（语料实测，21 篇引言均以 "To the best of our knowledge" 引出空白）：**
+语料中不存在 "has not been comprehensively explored" 这一表达；真实句式以 "there is/are no ..." 系为主（约 70%），辅以 "is not researched yet"、"this paper is the first to"：
 ```
-To the best of our knowledge, [研究空白] has not been comprehensively explored in prior works.
+To the best of our knowledge, there is/are no [已有工作] to investigate/consider/analyze [研究空白].
 ```
+- "To the best of our knowledge, there are no existing works to investigate the RS scheme for FD cooperative NOMA networks."
+- "To the best of our knowledge, there is no existing work investigating the impact of the direct link for FD user relaying on the network performance."
+- "To the best of our knowledge, the performance of STAR-RIS-NOMA with ipSIC/pSIC over Rician fading channels is not researched yet."
+- "To the best of our knowledge, this paper is the first to conduct an analysis of the physical layer security performance of RIS-AmBC networks.
 
 **动机扩展句式：**
 | 句式 | 频率 | 示例 |
@@ -90,13 +95,11 @@ To the best of our knowledge, [研究空白] has not been comprehensively explor
 | "Motivated by this gap/inspiration..." | ★★★★ | "Motivated by this gap in existing literature, this paper seeks to investigate..." |
 | "Although X has been studied, Y remains..." | ★★★ | "Although the above research provides a solid foundation, ASTARS-assisted FL remains an emerging area." |
 
-**尖锐问题引导模式（约 30% 的论文使用）：**
+**尖锐问题引导模式（约 15% 的论文使用；语料中的问题为直接问句，而非 "seeking answers to these questions" 框架）：**
 ```
-This paper aims to explore [topic] by seeking answers to these questions:
-- How does the significant X affect Y?
-- When comparing A and B, which factor poses a greater risk?
-- What are the disparities in X across different scenarios?
+[直接问句1]? [直接问句2]? This paper aims to answer these questions by [方案].
 ```
+- "Will NOMA relaying bring performance gains compared to HD NOMA relaying? If yes, what is the condition?"（语料原文）
 
 ### Layer 5：贡献列表 & 论文组织（1-2 段）
 
@@ -154,7 +157,7 @@ conjugate transpose operations, respectively. E{·} denotes the expectation oper
     ↓
 [Layer 4: 研究空白]
 "While the aforementioned works have laid a solid foundation..."
-"To the best of our knowledge, ... has not been comprehensively explored..."
+"To the best of our knowledge, there is no existing work investigating..."
 "Motivated by this gap, this paper seeks to investigate..."
     ↓
 [Layer 5: 贡献 + 组织]

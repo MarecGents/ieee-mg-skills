@@ -19,16 +19,22 @@
           "description": "IEEE Trans 风格论文审核 — 多角度审稿模拟，生成带严重性标签的逐句问题标注和重构建议报告"
         },
         {
+          "id": "ieee-mg-share",
+          "description": "课题组共享风格层 — 风格画像、术语规范、句式库、逻辑连接词指南，被 writing/polishing/reviewer 共同引用"
+        }
+      ]
+    },
+    {
+      "title": "In Development (sandbox/dev)",
+      "description": "开发中技能与语料资产 — 存放于 sandbox/dev/，尚未随 skills/ 正式发布",
+      "skills": [
+        {
           "id": "ieee-mg-citation",
-          "description": "IEEE 引用格式管理 — 引用格式校验、BibTeX导出（开发中）"
+          "description": "IEEE 引用格式管理 — 引用格式校验、BibTeX导出（开发中，仅骨架，位于 sandbox/dev/ieee-mg-citation/）"
         },
         {
           "id": "ieee-mg-database",
-          "description": "课题组论文语料库 — 21篇 B5G/6G/NOMA/RIS 方向 IEEE Trans 论文的章节拆分语料"
-        },
-        {
-          "id": "ieee-mg-share",
-          "description": "课题组共享风格层 — 风格画像、术语规范、句式库、逻辑连接词指南，被 writing/polishing/reviewer 共同引用"
+          "description": "课题组论文语料库 — 21篇 B5G/6G/NOMA/RIS 方向 IEEE Trans 论文的章节拆分语料（sandbox/dev/ieee-mg-database/）"
         }
       ]
     }

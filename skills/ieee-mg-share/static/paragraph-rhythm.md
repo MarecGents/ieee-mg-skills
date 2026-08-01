@@ -1,7 +1,7 @@
 # 段落节奏控制
 
 > 基于课题组 21 篇论文的段落统计与节奏分析。控制学术写作的呼吸感和流畅度。
-> 被 ieee-mg-writing 共同引用。
+> 被 ieee-mg-polishing 引用。
 
 ## 1. 各章节段落节奏基准
 
@@ -25,7 +25,7 @@
 | **Introduction** | "X has been deemed/regarded as..." / "To tackle these challenges..." / "In [x], the authors..." |
 | **System Model** | "We consider a system where..." / "The channel between X and Y is..." / "The optimization problem is formulated as..." |
 | **Numerical Results** | "In this section, numerical results are presented..." / "Fig. X plots..." / "Another observation is..." |
-| **Conclusion** | "In this paper, we have investigated..." / "Specifically, we have derived..." |
+| **Conclusion** | "This paper has investigated/studied..." / "In this paper, the ... has/have been investigated..." |
 
 ## 3. 段落间过渡策略
 

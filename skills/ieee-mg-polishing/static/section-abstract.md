@@ -4,7 +4,7 @@
 
 ## 一、润色重点（按优先级）
 1. **5要素完整性**：背景→问题→方法→结果→意义
-2. **结果编号规范**：(i)(ii)(iii) 格式、分号分隔、and 连接
+2. **结果编号规范**：i)/1) 无括号编号格式、分号分隔、and 连接
 3. **时态一致性**：全文一般现在时 + 现在完成时
 4. **信息密度**：每句都有实质信息，删除冗余
 
@@ -45,20 +45,20 @@
 ```
 检查摘要 →
   ├─ 首句是否为主动语态开头或让步转折结构？
-  │   └─ 模式A: "This paper investigates/proposes" (标准)
+  │   └─ 模式A: "This paper investigates/proposes"（约 40%，非唯一标准；亦可用技术主语式/Although 让步式）
   │   └─ 模式B: "Although... + To address these issues" (让步转折)
   │   └─ 都不是 → 改写为模式A或B (light)
   ├─ 是否包含方法细节（we derive/propose/formulate）？
   │   └─ 否 → 补充方法句 (moderate)
   ├─ 方法句是否为"总-分"结构展开？
   │   └─ 如用 "Specifically/More precisely" 展开细节 → 更优 (moderate)
-  ├─ 结果是否以(i)(ii)(iii)编号列出？
+  ├─ 结果是否以 i)/1) 无括号编号列出？
   │   └─ 否 → 改为编号列表 (moderate)
   ├─ 结果前是否有总起句？
   │   └─ 如用 "The simulation results verify the correctness and yield the following insights:" → 更优 (moderate)
   ├─ 缩略语首次出现是否已定义？
   │   └─ 否 → 添加全称定义 (light)
-  ├─ 词数是否在85-280范围内？（中位数~175）
+  ├─ 词数是否在85-280范围内？（实测中位数~210）
   │   ├─ 过长(>280) → 删除冗余句 (deep)
   │   └─ 过短(<90) → 补充方法/结果细节 (deep)
   └─ 时态是否统一（现在时）？
@@ -70,10 +70,10 @@
 - [ ] 首句动词：是否为 "investigates/proposes/introduces/studies" 或 "Although..." 让步转折
 - [ ] "Numerical results" / "Simulation results" / "Simulation findings" 短语：是否出现在结果句之前
 - [ ] 结果引出词是否多样化（show/demonstrate/indicate/verify/confirm/manifest）
-- [ ] 编号格式：是否使用 (i)(ii)(iii) 或 1)2)3)
+- [ ] 编号格式：是否使用 i)/1) 无括号编号（不用 (i)(ii)(iii)）
 - [ ] 比较动词是否多样（outperform/exceed/superior to/precede）
 - [ ] 缩略语检测：每个全大写词首次出现前是否已有全称
-- [ ] 词数统计：100-250 词
+- [ ] 词数统计：85-280 词（实测中位 ~210）
 - [ ] 时态检测：是否包含过去时动词（不应出现）
 - [ ] 方法动词检测：是否至少包含一个 "we propose/derive/formulate"
 - [ ] 方法展开是否使用 "More specifically" / "To be specific" 等过渡词

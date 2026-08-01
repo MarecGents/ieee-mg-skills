@@ -6,7 +6,7 @@
 ## 一、标准结构模板
 
 ### 要素 A：背景句（第 1 句）
-引出研究领域，点明重要性和趋势。语料中 100% 的摘要包含此要素。
+引出研究领域，点明重要性和趋势。语料中约 60% 的摘要以背景句开头（技术主语式或让步式）；其余约 40% 直接引入本文（模式 2/3）。
 
 **模式 1：技术受关注**（最常见，约 60%）
 ```
@@ -71,6 +71,8 @@ iii) [第三个发现].
 | **参数影响** | with the increasing of, by adjusting | "With the increasing of K, X is able to achieve the enhanced performance..." |
 | **特殊发现** | due to, because of, interestingly | "Due to the balance between A and B, introducing excess X is not helpful to reduce Y..." |
 
+编号列表内容规律：第 1 条多为方案优势对比，第 2 条多为参数影响，第 3 条多为特殊发现或权衡。
+
 ### 要素 E：意义句（可选，约 30% 包含）
 ```
 [This work] provides/presents a promising solution for [application].
@@ -90,6 +92,8 @@ iii) [第三个发现].
 | introduces | ★★★ | "This paper introduces X to assist..." |
 | analyzes | ★★ | "This paper analyzes..." |
 
+> 注：频次为全文出现次数（含正文重复）。按篇统计（21 篇）：以 "This paper investigates" 开头 4 篇、"This article investigates" 2 篇、"This paper proposes" 1 篇、"This article proposes" 1 篇、"This paper introduces" 1 篇，合计约 40%；"studies"/"analyzes" 未见于开头句。
+
 ### 2.2 结果引出词分布
 | 引出词 | 频次占比 |
 |--------|----------|
@@ -97,8 +101,8 @@ iii) [第三个发现].
 | "Simulation results verify/confirm that" | ~19% |
 | "The experimental results are presented to confirm that" | ~14% |
 
-### 2.3 编号结果格式规范
-- 使用小写罗马数字 (i), (ii), (iii)
+### 2.3 编号结果格式规范（语料实测）
+- 使用无括号编号：小写罗马 "i)" 或阿拉伯 "1)"（语料中不存在 "(i)(ii)(iii)" 括号形式；实测 i) 9 处 / 1) 15 处）
 - 每条结尾使用分号（;）
 - 最后一条前加 "and" 或 "and finally"
 - 最后一条以句号（.）结束
@@ -130,26 +134,26 @@ iii) [第三个发现].
 
 ## 三、课题组独有的摘要写作习惯
 
-1. **第一人称密集使用**：100% 的摘要使用 "we"（we propose/derive/formulate/investigate）
+1. **第一人称使用**：约 67%（14/21）的摘要使用 "we"（we propose/derive/formulate/investigate），密度约 6.5 次/千词
 2. **技术术语首次全称定义**：所有缩略语在摘要中首次出现时必须给出全称
 3. **结果量化偏好**：倾向于用具体数值和百分比而非模糊描述
 4. **比较型结果占主导**：几乎所有结果句都在与某种基准方案比较
-5. **编号列表结果高度规律**：(i) 第一个发现多为方案优势对比，(ii) 第二个发现多为参数影响，(iii) 第三个发现多为特殊发现或权衡
+5. **编号列表结果高度规律**：第 1 条多为方案优势对比，第 2 条多为参数影响，第 3 条多为特殊发现或权衡
 
 ## 四、篇幅规范
 | 指标 | 范围 | 中位数 |
 |------|------|--------|
-| 总词数 | 100-250 词 | ~165 词 |
+| 总词数 | 85-280 词（实测 min166/max273） | ~210 词 |
 | 总句数 | 5-10 句 | ~7 句 |
 | 平均句长 | 15-25 词 | ~20 词 |
 
 ## 五、写作检查清单
-- [ ] 是否以 "This paper investigates/proposes" 主动开头
+- [ ] 开头是否属于语料高频模式（约 40% 为 "This paper investigates/proposes"；或技术主语式 "X has attracted growing interest..."、"Although..." 让步式等）
 - [ ] 背景句是否点明了研究领域的重要性
 - [ ] 是否包含 "However" 类过渡指出已有工作不足
 - [ ] 方法部分是否包含 "we propose/derive/formulate" 等动作
 - [ ] 结果是否以 "Numerical results show/demonstrate that:" 引出
-- [ ] 结果是否以 (i)(ii)(iii) 编号列出（≥2 条）
+- [ ] 结果是否以 i)/1) 编号列出（≥2 条）
 - [ ] 所有缩略语首次出现时是否已定义全称（如 "imperfect SIC (ipSIC)"）
 - [ ] 是否包含至少一个性能比较（与 OMA/PRIS/传统方案等基准对比）
 - [ ] 词数是否在 100-250 词范围内
@@ -189,7 +193,7 @@ iii) [发现3].
 ### 6.4 实际篇幅分布更新（缺失5）
 | 指标 | 范围 | 中位数 | 备注 |
 |------|------|--------|------|
-| 总词数 | 85-280 | ~175 | 避免<90词（信息不足）或>280词（超限） |
+| 总词数 | 85-280 | ~210 | 避免<90词（信息不足）或>280词（超限）；实测中位数 212 |
 | 总句数 | 5-12 | ~7 | 极短摘要可达4句 |
 
 ## 七、第二轮蒸馏补充（语料深度对比新增模式）

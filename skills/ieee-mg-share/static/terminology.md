@@ -1,6 +1,6 @@
 # 课题组术语规范
 
-> 被 ieee-mg-writing 和 ieee-mg-polishing 共同引用。
+> 被 ieee-mg-writing、ieee-mg-polishing 和 ieee-mg-reviewer 共同引用。
 
 ## 1. 缩略语定义规则
 

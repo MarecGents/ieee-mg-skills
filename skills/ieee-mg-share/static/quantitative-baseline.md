@@ -1,7 +1,7 @@
 # 定量基准数据
 
 > 基于课题组 21 篇论文语料的精确定量统计。提供硬数据支撑写作和润色决策。
-> 被 ieee-mg-writing 和 ieee-mg-polishing 共同引用。
+> 被 ieee-mg-reviewer 引用。
 
 ## 1. 各章节篇幅统计
 
@@ -27,13 +27,15 @@
 
 | 章节 | 每千词"we"出现次数 | 使用场景 |
 |------|:------------------:|----------|
-| Abstract | 8 – 15 | "we propose/investigate/derive" |
+| Abstract | 6 – 8 | "we propose/investigate/derive"（实测 6.5/千词，14/21 篇） |
 | Introduction | 5 – 10 | 贡献陈述段中集中出现 |
 | System Model | 10 – 18 | "we consider/assume/define" |
 | Numerical Results | 3 – 7 | 较少，多以被动描述仿真 |
 | Conclusion | 5 – 10 | "we have investigated/demonstrated" |
 
 ## 4. 句子长度分布
+
+> 注：§3 "we" 密度仅 Abstract 经逐篇统计复核，其余章节数据为归纳估计。
 
 | 章节 | 平均句长（词） | 标准差 | 短句(<15词)占比 | 长句(>30词)占比 |
 |------|:--------------:|:------:|:---------------:|:---------------:|

@@ -1,16 +1,16 @@
 # 课题组全局风格画像
 
 > 基于课题组 21 篇 IEEE Trans/期刊论文语料蒸馏。本文件定义了所有写作/润色必须遵循的全局风格基准。
-> 被 ieee-mg-writing 和 ieee-mg-polishing 共同引用。
+> 被 ieee-mg-writing、ieee-mg-polishing 和 ieee-mg-reviewer 共同引用。
 
 ## 1. 学术正式度
 
 | 维度 | 定量特征 |
 |------|----------|
 | **被动语态比例** | 约 35%-45%（Abstract 中偏高 ~45%，Motivation 中偏低 ~35%） |
-| **第一人称频率** | "we" 平均每千词出现 8-12 次，用于 propose/derive/formulate/demonstrate 等动作 |
+| **第一人称频率** | "we" 平均每千词出现约 6-8 次（Abstract 实测 6.5/千词，14/21 篇使用），用于 propose/derive/formulate/demonstrate 等动作 |
 | **主要情态动词** | can（可能性/能力）> may（许可）> could（委婉/假设）> might（低概率推测） |
-| **否定表达** | 较少使用直接否定（"not"），更多使用委婉否定："remains unexplored"、"has not been comprehensively explored"、"is still in its infancy" |
+| **否定表达** | 较少使用直接否定（"not"），更多使用委婉否定："there is no existing work..."、"is not researched yet"、"is still in its infancy" |
 | **缩略形式** | 禁止使用缩略形式（don't → do not, can't → cannot, it's → it is） |
 
 ## 2. 句式复杂度
@@ -21,7 +21,7 @@
 | **从句密度** | 每句 0.8-1.5 个从句，which/that 引导的定语从句最常见（>60%） |
 | **插入语** | 较少使用括号插入，更多使用逗号分隔的非限制性定语从句 |
 | **典型复合句模式** | "By + V-ing ..., X is capable of ... while ..." |
-| **平行结构** | 编号列表 (i)(ii)(iii) 和 1)2)3)4) 使用平行语法结构 |
+| **平行结构** | 编号列表 i) ii) iii) 和 1) 2) 3) 4)（无括号）使用平行语法结构 |
 
 ## 3. 时态使用图谱
 

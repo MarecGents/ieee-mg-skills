@@ -28,7 +28,7 @@
 
 ### Q4：缺少研究空白
 ❌ 直接从文献综述跳到贡献列表
-✅ 添加 "To the best of our knowledge, X has not been comprehensively explored in prior works."
+✅ 添加 "To the best of our knowledge, there is no existing work investigating X."（语料主流空白句式）
 
 ### Q5：单词过渡词综合征
 ❌ "Meanwhile, in [x], the authors investigated... Furthermore, the authors of [y] proposed... Additionally, a framework [z] was developed... Moreover, a hybrid architecture [w] was introduced..."

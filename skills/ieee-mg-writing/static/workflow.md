@@ -63,15 +63,15 @@
 - 贡献点以编号列表 1), 2), 3), 4) 呈现
 
 **Conclusion 写作要点**
-- 以 "In this paper, we have investigated..." 开头
-- 时态：现在完成时回顾工作
+- 开头使用语料高频句式：被动完成时回顾（约 48%，"In this paper, the ... has/have been investigated..."）或 "This paper has investigated/studied..."（约 29%）——语料中不存在 "In this paper, we have investigated" 这一精确开头
+- 时态：现在完成时回顾工作（"we have derived/investigated" 用于句中回顾具体动作）
 - 长度：200-400 词，不分段
 - 未来工作：1-2 句具体方向
 
 **Abstract 写作要点**
 - 最后写，浓缩全文
 - 5 要素：背景→问题→方法→结果(编号)→意义
-- 结果以 (i)(ii)(iii) 编号列出
+- 结果以 i)/1) 无括号编号列出
 - 词数：120-200 词
 
 ### 第五步：自检与完善
@@ -85,9 +85,10 @@
 ## 课题组写作习惯特征（来自语料分析）
 
 ### Abstract 特征
-- 几乎 100% 以 "This paper investigates/proposes..." 开头
-- 约 80% 使用 (i)(ii)(iii) 编号结果列表
-- 平均 5-10 句，120-200 词
+- 约 40% 以 "This paper investigates/proposes..." 开头；其余为技术主语式（"X has attracted growing interest..." 等，约 35%）、"Although..." 让步式（约 10%）、"As a revolutionary technology..." 等模式
+- 约 67%（14/21）的摘要使用 "we"
+- 编号结果列表使用 i) 或 1) 无括号形式（不用 (i)(ii)(iii)）
+- 平均 5-10 句，词数 85-280（实测中位 ~210）
 
 ### Introduction 特征
 - 5 层标准结构：大背景→技术演进→文献综述(3块)→研究空白→贡献列表
@@ -102,6 +103,7 @@
 - 分析句式：引入→观察→解释 三段式
 
 ### Conclusion 特征
-- 现在完成时主导（"have investigated/have derived/have demonstrated"）
+- 开头两型主导：被动完成时回顾（~48%）与 "This paper has investigated..."（~29%）
+- 句中回顾具体动作多用现在完成时（"we have derived/have investigated"）
 - 不出现新的引用
 - 未来工作使用 "A promising future research direction is..."

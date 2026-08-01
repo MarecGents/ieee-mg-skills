@@ -18,9 +18,9 @@
 | 维度 | 定量特征 |
 |------|----------|
 | **被动语态比例** | 约 35%-45%（Abstract 中偏高，Motivation 中偏低） |
-| **第一人称频率** | "we" 平均每千词出现 8-12 次，用于 propose/derive/formulate 等动作 |
+| **第一人称频率** | "we" 平均每千词出现约 6-8 次（Abstract 实测 6.5/千词，14/21 篇使用），用于 propose/derive/formulate 等动作 |
 | **主要情态动词** | can（可能性/能力）> may（许可）> could（委婉）> might（低概率） |
-| **否定表达** | 较少直接否定，更多使用 "remains unexplored"、"has not been comprehensively explored" |
+| **否定表达** | 较少直接否定，更多使用委婉否定："there is no existing work..."、"is not researched yet" |
 
 ### 1.2 句式复杂度
 
