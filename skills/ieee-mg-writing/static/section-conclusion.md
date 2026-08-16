@@ -180,7 +180,7 @@ where [用户X] can be [具体场景A] and [用户Y] can be [具体场景B].
 - "It was demonstrated that..."（过去时，引用正文中的发现）
 - "It is worth pointing out that..."（强调重要发现）
 ```
-（注："It can be confirmed that" 在 Conclusion 语料中 0 处，勿用；"It has been shown that" 与 "It was demonstrated that" 为语料实证）
+（注："It can be confirmed that" 在 Conclusion 语料中 0 处（全语料仅 PRIS-ARIS-NOMA 1/21 篇在 Introduction/Motivation 使用），非主流构式，勿用；"It has been shown that" 与 "It was demonstrated that" 为语料实证）
 ---
 
 ## 判断边界（v1.3.0 新增）

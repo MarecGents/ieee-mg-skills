@@ -1,6 +1,6 @@
 # Conclusion 审核清单
 
-> **v1.2.0**：词数改 80-200（baseline 实测 0 篇超 200）；含数值改可选项；未来工作降为建议（约 48%）；被动确认句式修正；致命问题全映射。
+> **v1.2.0**：词数改 80-200（baseline 实测 0 篇超 200）；含数值改可选项；未来工作降为建议（约 48%）；被动确认句式修正；致命问题全映射。**v1.3.0**：修正 "It can be confirmed that" 断言——语料实测 1/21 篇（PRIS-ARIS-NOMA 篇）使用，降级为 🟢 合法变体提示，不判错。
 
 - [ ] 1. 开头是否属于语料高频四型之一（"This paper has investigated/studied..." 约 29% / "In this paper, the ... has/have been investigated..." 约 48% / "In this paper, we investigated..." 约 10% / "This article..." 变体约 14%；四型均为合法，不强制某型；**四型之外语料可溯源变体同样合法**）
 - [ ] 2. 时态是否正确（现在完成时回顾工作为主，约 15/21 篇；过去时/现在时为合法变体约 6/21 篇；段内混用判错）
@@ -14,7 +14,7 @@
 - [ ] 10. 是否包含 "A promising future research direction is..."（💡 语料高频未来工作句式，缺失不判错）
 - [ ] 11. 是否使用顺序词串联发现（"Firstly... Secondly... Finally"；💡 低频，约 1/21 篇）
 - [ ] 12. 是否有实际应用场景落点（"From the perspective of practical applicability..."；💡 低频，约 2/21 篇）
-- [ ] 13. 是否使用被动确认句式（"It has been shown that..." / "It was demonstrated that..." 语料实证；**"It can be confirmed that" 语料 0 处，出现判 🟡**）
+- [ ] 13. 是否使用被动确认句式（"It has been shown that..." / "It was demonstrated that..." 语料实证；**"It can be confirmed that" 语料低频（仅 PRIS-ARIS-NOMA 1/21 篇在 Introduction/Motivation 使用），非主流构式，出现不判错（🟢 提示）**）
 
 ## 常见致命问题（13 项全映射）
 | 问题 | 触发检查项 | 严重性 |
@@ -32,4 +32,4 @@
 | 无数值总结 | #4 | 🟢（可选项） |
 | 缺顺序词串联 | #11 | 🟢 |
 | 未复述主要发现 | #4 | 🟡 |
-| 使用 "It can be confirmed that" | #13 | 🟡 |
+| 使用 "It can be confirmed that" | #13 | 🟢（语料低频 1/21 篇，非主流构式；合法变体不判错） |

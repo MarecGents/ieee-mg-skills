@@ -1,7 +1,7 @@
 # Conclusion 润色规范
 
 > 结论润色规范，含常见问题、润色重点和决策树。Motivation / System Model 的润色规范见独立文件 section-motivation.md / section-system-model.md。
-> **v1.2.0**：开头句式注明合法变体；被动确认句式修正（It can be confirmed that 语料 0 处）；数值总结降为可选项；词数 80-200。
+> **v1.2.0**：开头句式注明合法变体；被动确认句式修正（It can be confirmed that 语料低频，仅 1/21 篇）；数值总结降为可选项；词数 80-200。
 
 ## Conclusion 润色
 
@@ -23,7 +23,7 @@
 2. **数值对比**：💡 可选项（语料仅 1/21 篇结论含数值）；使用多层对比句式（"Compared to A and B, X has attained Y% and Z%"）仅当用户已提供数值
 3. **顺序词串联**：💡 低频可选（约 1/21 篇），用 "Firstly... Secondly... Finally" 替代编号列表
 4. **实际应用落点**：💡 低频可选（约 2/21 篇），添加 "From the perspective of practical applicability..." 句
-5. **被动确认句式**：使用语料实证句式 "It has been shown that..."（2-3 处）/ "It was demonstrated that..."；**"It can be confirmed that" 语料 0 处，勿用**
+5. **被动确认句式**：使用语料实证句式 "It has been shown that..."（2-3 处）/ "It was demonstrated that..."；**"It can be confirmed that" 语料低频（仅 PRIS-ARIS-NOMA 1/21 篇使用），非主流构式，勿用**
 6. **未来工作**：💡 约 48% 论文写，非必须；从局限性出发引出未来方向
 
 ### 决策树
