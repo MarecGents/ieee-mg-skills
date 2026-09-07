@@ -57,3 +57,7 @@ temp/
 reasonix.toml
 # Local dev database (untracked, kept locally)
 sandbox/dev/ieee-mg-database/
+
+# Test environment (local only, keep .gitkeep)
+sandbox/tests/
+!sandbox/tests/.gitkeep
