@@ -1,6 +1,6 @@
 # IEEE-MG-Response 技能清单
 name: ieee-mg-response
-version: 0.1.0
+version: 0.1.1
 axes:
   response_type:
     values: [editor, reviewer, both]
