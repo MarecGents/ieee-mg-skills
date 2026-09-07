@@ -1,0 +1,135 @@
+---
+name: ieee-mg-response
+description: >
+  IEEE 系列期刊/会议论文大修 Response Letter 撰写技能。适用于回复 Editor 和 Reviewer 的逐条评审意见（Point-by-Point Response），
+  覆盖 STAR-RIS、NOMA、RIS、IRS、6G、MIMO、波束赋形、安全通信等课题组核心研究方向。
+  当用户提出以下请求时触发：撰写/生成/优化 response letter、回复审稿意见、大修回复、revision response、rebuttal、逐条回复、
+  cover letter、response to editor、response to reviewer。
+version: 0.1.0
+author: MarecGents Group
+---
+
+# IEEE-MG-Response 技能路由协议
+
+## 一、架构总览
+
+| 层级 | 加载源 | 说明 |
+|------|--------|------|
+| **共享层** | `../ieee-mg-share/static/` | 全局风格画像、术语表、表达库、逻辑连接词、常见错误、量化基线 |
+| **核心层** | `static/core.md` | Response 撰写核心原则、首句/二句/末句套路、引用逻辑、四铁律 |
+| **工作流层** | `static/workflow.md` | 完整流程（输入检查 → 提取编号 → 分类询问 → 清单输出 → tex 生成） |
+| **片段层** | `static/section-*.md` | 按评审意见类型和回复环节按需加载的专用模板 |
+
+## 二、路由协议
+
+### Step 0：加载共享层
+从 `../ieee-mg-share/static/` 加载：
+- `style-profile.md` — 全局风格画像
+- `terminology.md` — 课题组标准术语表
+- `expression-bank.md` — 句式模板库
+- `logic-connectors.md` — 逻辑连接词指南
+- `quantitative-baseline.md` — 量化基线
+
+### Step 1：加载核心层
+始终加载 `static/core.md`。
+
+### Step 2：输入完整性检查（⚠ 必须最先执行）
+
+收到用户请求后，**首先检查输入完整性**：
+- 有完整的返修邮件原文 → ✅ 进入 Step 3
+- 有部分意见文本 → ❓ 询问：**"您提供的意见似乎不完整，缺少 [具体部分]。请问是否有完整的返修邮件？"**
+- 未提供任何意见 → ❓ 询问：**"请提供审稿意见原文。没有原文无法生成有针对性的回复。"**
+- 提供了 tex 文件 → ✅ 从 tex 中提取 Comment 内容
+
+**不可跳过此步。不完整的输入会导致无效回复。**
+
+### Step 3：检测请求轴
+从用户输入中推断以下轴：
+
+| 轴 | 值 | 别名/推断方式 |
+|----|----|--------------|
+| `response_type` | editor / reviewer / both | 默认 `both` |
+| `comment_count` | N（整数） | 从审稿意见数量推断 |
+| `language` | en / zh | 默认 `en` |
+| `paper_type` | journal / conf / mag | 默认 `journal` |
+| `depth` | full / single-comment | 默认 `full` |
+
+### Step 4：加载匹配片段
+- 始终加载：`section-structure.md`、`section-opening.md`、`section-latex-format.md`
+- 按评论类型加载：
+  - 修改型 → `section-modification.md`
+  - 评论处理 → `section-handling.md`
+  - Editor 回复 → `section-editor-response.md`
+
+### Step 5：执行 Response 撰写（按 workflow.md 流程）
+
+本技能采用**两轮交互模式**：
+
+**第一轮（AI → 用户）**：
+1. 通读论文原文和返修意见
+2. 输出 `output/comments_list.md`（意见清单）
+3. 输出 `output/comments_translated.md`（翻译版）
+4. 逐条分类，输出 **Q1-QN 问题清单**（含每条评论的类型、推荐方案、需确认的选择）
+5. **⚠ 此轮结束，AI 停止，等待用户回复**
+
+**第二轮（用户 → AI）**：
+1. 用户将 Q1-QN 全部回复后发送
+2. AI 读取回答，确认策略
+3. 输出 `output/response_plan.md`（回复方案）
+4. 生成 `output/Response_[稿件ID].tex`
+5. **交叉验证**：正文 `\textadd{}` ↔ Response 蓝色摘录一致性检查
+6. 最终自检清单
+
+## 三、决策边界
+
+| 场景 | 操作 |
+|------|------|
+| 用户提供了完整返修邮件 | ✅ 直接进入意见提取，无需再问 |
+| 用户提供了部分意见 | ❓ **必须询问**是否有完整版本，不可匆忙执行 |
+| 用户未提供任何意见原文 | ❓ **必须请求**提供原文，不可自行编造 |
+| 澄清型评论（无正文修改） | ✅ 写澄清回应，**绝不**附蓝色修改摘录 |
+| 接受型评论（需修改正文） | ⚠️ **必须逐条询问用户策略**，AI 提供 2-3 候选方案，用户确认后才撰写 |
+| 拒绝型评论（有理有据地不采纳） | ⚠️ **必须询问用户拒绝理由**，AI 可推荐理由和引用 |
+| 宽泛语法评论 | ✅ 逐项列出每个修正（每个修正一个 quote 块） |
+| 用户未指定论文方向 | ✅ 从上下文推断；无法推断时标注 `[待补: 具体参数/指标]` |
+| 需要新增图表但用户未提供 | ✅ 使用 `\caption*{}` 模板占位，标注 `[待插入: 图/表描述]` |
+| 要求超出 Response 范围 | ❌ 引导使用 `ieee-mg-writing` 或 `ieee-mg-polishing` |
+| 正文与 Response 不一致 | ⚠️ **必须执行交叉验证**：提取正文 `\textadd{}` 与 Response 蓝色摘录逐块比对，发现公式符号/术语缩写不一致时修正 |
+| 用户手动编辑了正文但未同步 Response | ⚠️ 询问用户是否需要同步更新 Response 中的对应摘录 |
+
+### ⚠ 修改型意见的强制询问规则（两轮交互模式）
+
+本技能采用**两轮交互模式**，确保用户全程掌控决策：
+
+**第一轮**：AI 输出 Q1-QN（所有需确认的点），然后**停止**
+**第二轮**：用户回复 Q1-QN 后，AI 读取并继续执行
+
+- 澄清型：AI 给出澄清方案，用户确认
+- 修改型：**必须询问**，AI 给出 2-3 候选方案，用户选择
+- 拒绝型：AI 推荐理由和引用，用户确认
+- **第一轮输出后 AI 必须停止，绝不自行推进到 Phase 3**
+
+## 四、边界表
+
+| 本技能**负责** | 本技能**不负责** |
+|----------------|-------------------|
+| Editor 回复撰写（Cover Letter + 逐条） | 论文正文写作（→ `ieee-mg-writing`） |
+| Reviewer 逐条回复撰写 | 论文润色（→ `ieee-mg-polishing`） |
+| 评审意见分类与策略判断（含强制询问） | 论文审核（→ `ieee-mg-reviewer`） |
+| LaTeX Response 格式规范 | 系统模型推导 |
+| 蓝色高亮修改文本生成 | 图表内容设计（仅负责格式模板） |
+| 封面信（Cover Letter）撰写 | 参考文献检索 |
+| 拒绝型回复的礼貌措辞 | 与 Editor 的邮件沟通 |
+| 语法/笔误修正的逐项列举 | 期刊投稿系统操作 |
+| 三步清单输出（.md 文档） | 直接写入 tex 文件（先确认再转化） |
+
+## 五、设计原则
+
+1. **基于课题组真实 Response 语料蒸馏**：所有模板、用语、格式规范均从 2 篇已发表 TWC 论文的 Response Letter（54 条评审意见）中提炼
+2. **逐条可追溯**：每条回复模板均对应语料中的真实案例，标注来源
+3. **类型区分严格**：澄清 vs 修改 vs 拒绝三类回复策略严格区分，绝不混淆
+4. **格式零误差**：LaTeX 格式规范统一且可直接使用
+5. **与共享层一致**：Response 中引用的术语、表达风格与 `ieee-mg-share` 全局基准保持一致
+6. **强制询问不越权**：修改型意见必须经过用户确认，AI 不可私自执行修改
+7. **清单先行不直接写 tex**：先输出 .md 清单文档，确认后再转化为 tex
+8. **输入完整性优先**：不完整的返修意见不可勉强执行，必须先询问完整版本

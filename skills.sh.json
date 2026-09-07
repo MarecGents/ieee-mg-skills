@@ -21,6 +21,10 @@
         {
           "id": "ieee-mg-share",
           "description": "课题组共享风格层 — 风格画像、术语规范、句式库、逻辑连接词指南，被 writing/polishing/reviewer 共同引用"
+        },
+        {
+          "id": "ieee-mg-response",
+          "description": "IEEE 大修 Response Letter 撰写 — 逐条回复 Editor/Reviewer 评审意见，含五维分类、80+句式库、LaTeX 模板、交叉验证（v0.1.0，基于 3 篇语料 73 条意见蒸馏）"
         }
       ]
     },

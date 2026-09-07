@@ -18,7 +18,7 @@ npx skills add MarecGents/ieee-mg-skills
 
 ## Available Skills
 
-Four skills, all at **v1.3.0**, distilled from 21 real IEEE Trans papers in the group's B5G/6G, NOMA, RIS/STARS corpus.
+Five skills, all at **v1.3.0** (response at **v0.1.0**), distilled from real IEEE papers in the group's B5G/6G, NOMA, RIS/STARS corpus.
 
 ### 🖊️ ieee-mg-writing — IEEE Trans 风格学术写作 `v1.3.0`
 
@@ -52,22 +52,41 @@ Shared style profile, terminology, expression bank, and logic connectors distill
 
 **Keywords:** `shared resources` `terminology` `style guide` `expression library`
 
+### 📝 ieee-mg-response — IEEE 大修 Response Letter 撰写 `v0.1.0`
+
+Point-by-point response letter drafting for IEEE journal major revisions. Covers **Editor and Reviewer reply** with 5-type comment classification, 80+ polite opening phrases, LaTeX blue-highlight modification templates, two-round interaction model (Q1-QN → user reply → plan → tex), and cross-validation pipeline distilled from 3 real response letters (73 comments total across 2 TWC + 1 TGCN papers).
+
+**v0.1.0 特性：** 五轴路由（`response_type` · `comment_count` · `language` · `paper_type` · `depth`）+ 评论五维分类体系（澄清/修改/部分接受/拒绝/宽泛）+ 两轮交互模式（第一轮输出 Q1-QN 停止，第二轮读取回答继续）+ 80+ 句式库（语料实测 + AI 拓展）+ 完整 LaTeX 模板 + 交叉验证 + Gate 同步检查 + evals 测试用例。
+
+**Keywords:** `response letter` `rebuttal` `reviewer response` `major revision` `IEEE` `LaTeX`
+
+---
+
+## In Development
+
 ---
 
 ## Repository Structure
 
 ```
 ieee-mg-skills/
-├── skills/                    # Published skills (v1.3.0)
+├── skills/                    # Published skills (v1.3.0 + response v0.1.0)
 │   ├── ieee-mg-writing/       # IEEE Trans 风格写作
 │   │   ├── SKILL.md           # 技能说明 + 路由协议
 │   │   ├── manifest.yaml      # 轴（axes）与片段（fragments）映射
 │   │   └── static/            # 章节模板与规范
 │   ├── ieee-mg-polishing/     # IEEE Trans 风格润色
 │   ├── ieee-mg-reviewer/      # IEEE Trans 风格审核
-│   └── ieee-mg-share/         # 共享风格层（writing/polishing/reviewer 共用）
+│   ├── ieee-mg-share/         # 共享风格层（writing/polishing/reviewer 共用）
+│   └── ieee-mg-response/      # IEEE 大修 Response Letter 撰写（v0.1.0）
+│       ├── SKILL.md
+│       ├── manifest.yaml
+│       ├── static/            # 核心原则、工作流、句式库、LaTeX 模板等
+│       └── evals/             # 测试用例
 ├── sandbox/
 │   ├── dev/                   # 开发中的技能与语料资产（未发布）
+│   │   ├── ieee-mg-citation/  # IEEE 引用格式管理（骨架）
+│   │   └── ieee-mg-database/  # 课题组论文语料库（gitignored）
 │   └── tests/                 # Test environment
 ├── template/                  # SKILL.md template
 └── skills.sh.json             # skills.sh registry config
