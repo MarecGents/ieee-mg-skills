@@ -39,10 +39,27 @@
 
 ### 模板 C：公式修改
 
+**公式摘录三类格式（⚠ 三者的格式不可混用）**：
+
+| 类型 | 判定 | 正文格式 | Response 摘录格式 |
+|------|------|----------|-------------------|
+| **独立编号公式** | 正文中是 `\begin{align}...\end{align}` 独立公式 | `\textadd{公式整体}` | `\begin{align} 公式 \tag{N} \end{align}` 包在 `\textcolor` 内（**不含** `\label`） |
+| **where 块行内公式** | 公式在 where 块中，形如 `$...$,` 逐项排列 | `\textadd{$...$}` 逐项 | **行内 `$...$`**，用逗号分隔，**不可**放进 align 环境 |
+| **公式内符号引用** | 正文中引用公式编号（`\eqref{}`） | — | 转为字面编号 `Eq.~(N)` |
+
+**独立编号公式示例**：
 ```latex
 \begin{quote}
 \underline{Eq.~(N) in Section III:}\\
-\textcolor[rgb]{0.00,0.00,1.00}{[修改后的完整公式，包含上下文说明]}
+\textcolor[rgb]{0.00,0.00,1.00}{\begin{align} 公式内容 ,\tag{N} \end{align}}
+\end{quote}
+```
+
+**where 块行内公式示例**：
+```latex
+\begin{quote}
+\underline{Definition of $\xi_r$ in Section II:}\\
+\textcolor[rgb]{0.00,0.00,1.00}{$\xi_r = f(\mathbf{h}_{br}, \mathbf{h}_{re})$, where $\mathbf{h}_{br}$ denotes...}
 \end{quote}
 ```
 
@@ -73,6 +90,13 @@ Section IV to provide additional simulation details.
 ```
 
 **注意**：在 Response 文档中，表格标题使用字面 `Table~I`（而非 `\ref{tab:label}`），因为 Response 通常是独立文档。
+
+### 模板 D 附注：表格高亮的技术限制
+
+LaTeX 的 `table` 是浮动体，**无法**用 `\textadd{}` 整体包裹。替代方案：
+1. **单元格级高亮**（推荐）：对新增/修改的每个单元格用 `\textcolor[rgb]{0.00,0.00,1.00}{}` 包裹
+2. **caption 高亮**：`\caption{\textcolor[rgb]{0.00,0.00,1.00}{...}}`
+3. **放弃表格高亮**：仅在 Response 叙述中说明"新增表格"（用户可接受时最简方案）
 
 ### 模板 E：新增图表
 
@@ -159,6 +183,8 @@ As suggested, we have revised the manuscript in multiple places:
 \end{quote}
 ```
 
+**末句保护规则**：插入删除说明或补充说明时，应插入到 Response 段落中部（正文解释之后、引出 quote 块的过渡句之前）。**必须保持原段落的末句不变**——末句通常是 "To address your.../The relevant...below" 的引出句，改动会破坏段落收束感。
+
 ## 语法/拼误修正的逐项列举
 
 当审稿人给出宽泛语法评论时（如"typos and grammar issues"），**必须逐项拆解**：
@@ -231,3 +257,40 @@ is left for future work.\footnote{Future work will consider
 [details] under [conditions] conditions.}}
 \end{quote}
 ```
+
+### 正文脚注 + Response 摘录的对应写法
+
+**正文**：`\textadd{...文本\footnote{脚注内容}}`（`\footnote` 在 `\textadd` 内）
+**Response 摘录**：推荐用上标替代 `\footnote`（避免 Response 文档中脚注排版不受控）：
+
+```latex
+\begin{quote}
+\underline{[位置]:}\\
+\RevisedExcerpt{...文本${}^1$.\\
+${}^1$ [脚注内容]}
+\end{quote}
+```
+
+**注意**：脚注内容也是正文修改的一部分，必须在 Response 中完整展示（不可省略）。
+
+## 删除内容的 Response 处理
+
+当正文删除了某段文本（非替换，而是彻底移除），Response 中**不使用蓝色高亮删除**，而是用叙述文字说明：
+
+**删除说明的三种写法**：
+
+1. **只说明不展示**（推荐，最常见）：
+```latex
+Accordingly, the sentence ``[被删原文的前几个关键词]...'' has been
+removed from [位置], since [删除理由].
+```
+
+2. **交叉引用他处**（当删除是其他 comment 的连带结果）：
+```latex
+...as its content is already covered by the revised statement under
+Reviewer~N Comment~M.
+```
+
+3. **源码保留备查**（仅源码层面）：用 `%` 逐行注释掉，不进入编译输出。
+
+**禁止**：❌ 对被删除内容使用蓝色高亮。❌ 只用一句"we have removed it"而不引用原文（审稿人无法核对删了什么）。

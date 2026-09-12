@@ -18,7 +18,7 @@ npx skills add MarecGents/ieee-mg-skills
 
 ## Available Skills
 
-Five skills, all at **v1.3.1** (response at **v0.1.1**), distilled from real IEEE papers in the group's B5G/6G, NOMA, RIS/STARS corpus.
+Five skills, all at **v1.3.1** (response at **v0.1.2**), distilled from real IEEE papers in the group's B5G/6G, NOMA, RIS/STARS corpus.
 
 ### 🖊️ ieee-mg-writing — IEEE Trans 风格学术写作 `v1.3.1`
 
@@ -52,11 +52,11 @@ Shared style profile, terminology, expression bank, and logic connectors distill
 
 **Keywords:** `shared resources` `terminology` `style guide` `expression library`
 
-### 📝 ieee-mg-response — IEEE 大修 Response Letter 撰写 `v0.1.1`
+### 📝 ieee-mg-response — IEEE 大修 Response Letter 撰写 `v0.1.2`
 
 Point-by-point response letter drafting for IEEE journal major revisions. Covers **Editor and Reviewer reply** with 5-type comment classification, 80+ polite opening phrases, LaTeX blue-highlight modification templates, two-round interaction model (Q1-QN → user reply → plan → tex), and cross-validation pipeline distilled from 3 real response letters (73 comments total across 2 TWC + 1 TGCN papers).
 
-**v0.1.1 特性：** 五轴路由（`response_type` · `comment_count` · `language` · `paper_type` · `depth`）+ 评论五维分类体系（澄清/修改/部分接受/拒绝/宽泛）+ 两轮交互模式（第一轮输出 Q1-QN 停止，第二轮读取回答继续）+ 80+ 句式库（语料实测 + AI 拓展）+ 完整 LaTeX 模板 + 交叉验证 + Gate 同步检查 + evals 测试用例。
+**v0.1.2 特性：** 三模式路由（`full` / `single-comment` / **`micro-adjust`** 增量微调）+ 评论五维分类体系（澄清/修改/部分接受/拒绝/宽泛）+ **七铁律**（类型不混淆 / 修改同步 / 宽泛拆解 / 清单先行 / Editor-Reviewer 分离 / **高亮粒度三原则** / **删除 vs 替换区分**）+ 两轮交互模式（第一轮输出 Q1-QN 停止，第二轮读取回答继续）+ 90+ 句式库（语料实测 + AI 拓展）+ 完整 LaTeX 模板（含 `.R[M]` 轮次后缀）+ 交叉验证（Phase 7.1-7.7 含传导同步矩阵）+ Gate 同步检查 + 6 个 evals 测试用例。
 
 **Keywords:** `response letter` `rebuttal` `reviewer response` `major revision` `IEEE` `LaTeX`
 
@@ -76,7 +76,7 @@ All skills in this repository follow a **read-only by default** policy: they nev
 
 ```
 ieee-mg-skills/
-├── skills/                    # Published skills (v1.3.1 + response v0.1.1)
+├── skills/                    # Published skills (v1.3.1 + response v0.1.2)
 │   ├── ieee-mg-writing/       # IEEE Trans 风格写作
 │   │   ├── SKILL.md           # 技能说明 + 路由协议
 │   │   ├── manifest.yaml      # 轴（axes）与片段（fragments）映射
@@ -84,7 +84,7 @@ ieee-mg-skills/
 │   ├── ieee-mg-polishing/     # IEEE Trans 风格润色
 │   ├── ieee-mg-reviewer/      # IEEE Trans 风格审核
 │   ├── ieee-mg-share/         # 共享风格层（writing/polishing/reviewer 共用）
-│   └── ieee-mg-response/      # IEEE 大修 Response Letter 撰写（v0.1.1）
+│   └── ieee-mg-response/      # IEEE 大修 Response Letter 撰写（v0.1.2）
 │       ├── SKILL.md
 │       ├── manifest.yaml
 │       ├── static/            # 核心原则、工作流、句式库、LaTeX 模板等

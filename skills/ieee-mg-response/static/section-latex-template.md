@@ -1,4 +1,4 @@
-# Response LaTeX 模板（v0.0.5 完整版）
+# Response LaTeX 模板（v0.1.2 完整版）
 
 > 基于 3 篇语料（TWC u1 + TWC u2 + TGCN-RP）最佳实践整合生成。
 > 可直接复制为起点，替换 `[方括号内容]` 即可使用。
@@ -81,11 +81,13 @@ Yours sincerely,
 \begin{center}
 \textbf{\Large{[期刊缩写]\\ID [稿件ID]\\[0.3cm]
 [论文标题] \\[0.3cm]
-Authors' Response to Editor.R1\\}
+Authors' Response to Editor.R[M]\\}
 }
 \vspace{0.3cm}
 \emph{[Author List]}
 \end{center}
+
+% R[M] = 返修轮次（R1=首轮大修，R2=二轮，以此类推）
 
 \vspace{8pt}
 
@@ -193,11 +195,11 @@ manuscript.
 | 评论标签 | `\noindent \textsf{\textbf{Comment N:}}` | 三篇通用 |
 | 回复标签 | `\noindent \textsf{{\textbf{Response:}}}` | 三篇通用 |
 | 评论引用 | `\noindent \emph{[原文]}` | 三篇通用 |
-| 蓝色摘录 | `\RevisedExcerpt{...}` 或 `\textcolor[rgb]{0.00,0.00,1.00}{...}` | TGCN 用宏 / TWC 用原始 |
+| 蓝色摘录 | 文字用 `\RevisedExcerpt{...}`；公式/表格/caption 用 `\textcolor[rgb]{0.00,0.00,1.00}{...}` | 按内容类型选择 |
 | 位置标注 | `\underline{[位置]:}\\` | 三篇通用 |
 | 新图 | `\caption*{\textcolor[rgb]{0.00,0.00,1.00}{Fig.~N: ...}}` | 三篇通用 |
 | 参考文献 | `{\footnotesize{[N] Author, ...}}` | 三篇通用 |
-| 公式 | `\begin{equation}` 或 `\begin{align}+\tag{N}` | 两种均可用 |
-| 段头 | 居中 5 行块（期刊+ID+标题+回复标识+作者） | TGCN 模式 |
+| 公式 | `\begin{align}...\tag{N}...\end{align}` | 语料零例外（不用 `equation`） |
+| 段头 | 居中块：期刊+ID+标题+`Authors' Response to Reviewer [N].R[M]`+作者 | TGCN 模式 |
 | 段尾 | `\bigskip` + 致谢 + `\emph{作者}` | TWC 模式 |
 | 换页 | `\clearpage` | 三篇通用 |

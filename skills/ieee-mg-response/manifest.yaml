@@ -1,6 +1,6 @@
 # IEEE-MG-Response 技能清单
 name: ieee-mg-response
-version: 0.1.1
+version: 0.1.2
 axes:
   response_type:
     values: [editor, reviewer, both]
@@ -27,11 +27,12 @@ axes:
       conf: [会议, conference]
       mag: [杂志, magazine]
   depth:
-    values: [full, single-comment]
+    values: [full, single-comment, micro-adjust]
     default: full
     aliases:
       full: [完整, 整篇, 全部]
       single-comment: [单条, 单个评论, one comment]
+      micro-adjust: [微调, 局部修改, 只改这一处, adjust]
 
 # Fragment 映射
 fragments:
@@ -49,7 +50,7 @@ fragments:
       trigger: always
       file: section-latex-format.md
     modification:
-      trigger: depth == full && comment_count > 0
+      trigger: depth in [full, micro-adjust] && comment_count > 0
       file: section-modification.md
     handling:
       trigger: comment_count > 0
@@ -67,4 +68,5 @@ load_rules:
   - core.md 和 workflow.md 始终加载
   - section 层根据 axes 触发条件按需加载
   - 单条回复模式（single-comment）下仅加载 core.md + section-opening.md + section-handling.md + section-latex-format.md
+  - 微调模式（micro-adjust）下加载 core.md + workflow.md + section-modification.md + section-latex-format.md（跳过 Phase 0-4，直接进入"指定位置 → 修改 → 传导同步 → 交叉验证"循环）
   - 输入完整性检查优先于所有片段加载

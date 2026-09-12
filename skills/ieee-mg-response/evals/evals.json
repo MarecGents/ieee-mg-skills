@@ -3,22 +3,19 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "帮我回复这篇论文的大修意见。返修邮件内容如下：\n\nDear Dr. Yue,\nI have been able to get reviews for your paper \"Secrecy Communications for ASTARS-NOMA Networks with Stochastic Geometry,\" paper number TGCN-RP-A2-26-0200.\n\nReviewer 1:\n1. The authors should clarify the incremental contribution relative to prior works, especially [45].\n2. Please provide a brief quantitative justification for the cross-region simplification.\n3. The Gauss-Chebyshev/Laguerre parameters G, N, L are not specified.\n4. The authors should clarify which curves are analytical vs. simulation in Figs. 3-9.\n5. There are some grammatical errors.\n\nReviewer 2:\n1. The abstract incorrectly claims NOMA outperforms OMA.\n2. The discussion of Fig. 8 is contradictory.\n7. Include appropriate units on the axes of all figures.\n8. Correct all typographical errors.\n\nReviewer 3:\n1. The paper appears to be an incremental intersection.\n5. Although submitted as a green communication paper, it evaluates only SOP.\n\n论文原文在 sandbox/tests/test-ieee-mg-response/ 目录下。",
+      "prompt": "帮我回复这篇论文的大修意见。返修邮件内容如下：\n\nDear Dr. Yue,\nI have been able to get reviews for your paper \"Secrecy Communications for ASTARS-NOMA Networks with Stochastic Geometry,\" paper number TGCN-RP-A2-26-0200.\n\nReviewer 1:\n1. The authors should clarify the incremental contribution relative to prior works, especially [45].\n2. Please provide a brief quantitative justification for the cross-region simplification.\n3. The Gauss-Chebyshev/Laguerre parameters G, N, L are not specified.\n4. The authors should clarify which curves are analytical vs. simulation in Figs. 3-9.\n5. There are some grammatical errors.\n\nReviewer 2:\n1. The abstract incorrectly claims NOMA outperforms OMA.\n2. The discussion of Fig. 8 is contradictory.\n7. Include appropriate units on the axes of all figures.\n8. Correct all typographical errors.\n\nReviewer 3:\n1. The paper appears to be an incremental intersection.\n5. Although submitted as a green communication paper, it evaluates only SOP.",
       "expected_output": "AI 应按 Phase 0 检查输入完整性 → Phase 1 输出 comments_list.md 和 comments_translated.md → Phase 2 输出 Q1-QN 问题清单后停止，等待用户回复。不应自行生成 response_plan.md 或 tex。",
-      "files": [
-        "sandbox/tests/test-ieee-mg-response/Latex_Secrecy Communications for ASTARS-NOMA Networks.tex",
-        "sandbox/tests/test-ieee-mg-response/TGCN-RP-A2-26-0200 - Editor Major Revision - IEEE Transactions on Green Communications and Networking.md"
-      ],
+      "files": [],
       "assertions": [
         {
           "type": "must_contain",
-          "description": "输出中必须包含 comments_list.md 的生成",
-          "check": "文件输出包含 comments_list.md 或等价的编号意见清单"
+          "description": "输出中必须包含意见清单（comments_list.md 格式）",
+          "check": "输出包含按 Reviewer 分组、带编号的意见清单"
         },
         {
           "type": "must_contain",
-          "description": "输出中必须包含 comments_translated.md 的生成",
-          "check": "文件输出包含 comments_translated.md 或中英对照翻译"
+          "description": "输出中必须包含中英对照翻译（comments_translated.md 格式）",
+          "check": "输出包含每条意见的英文原文 + 中文翻译"
         },
         {
           "type": "must_contain",
@@ -28,25 +25,25 @@
         {
           "type": "must_stop",
           "description": "第一轮输出后必须停止，不自行生成 response_plan.md",
-          "check": "输出末尾提示用户回复 Q1-QN，不包含 response_plan.md 内容"
+          "check": "输出末尾提示用户回复 Q1-QN，不包含 response_plan.md 内容或 tex 内容"
         }
       ]
     },
     {
       "id": 2,
       "prompt": "请帮我写一篇 IEEE TWC 论文的大修 Response Letter。以下是审稿意见：\n\nReviewer 1:\n1. Please clarify the mode switching protocol for STAR-RIS.\n2. Add a figure showing the impact of target rates on outage.\n\nReviewer 2:\n1. The channel estimation for STAR-RIS is challenging. Please discuss.\n2. Why do you assume perfect CSI? Please add a sensitivity analysis.\n\n论文标题：Simultaneously Transmitting and Reflecting Reconfigurable Intelligent Surface Assisted NOMA Networks\n期刊：IEEE Transactions on Wireless Communications\n稿件编号：Paper-TW-Oct-21-1443.R1\n作者：Xinwei Yue, Jin Xie, Yuanwei Liu, Zhihao Han, Rongke Liu, Zhiguo Ding",
-      "expected_output": "AI 应按 Phase 0 检查输入（注意到没有完整返修邮件，只有部分意见）→ 可能询问是否有完整版本 → Phase 1 输出清单 → Phase 2 输出 Q1-QN 后停止。",
+      "expected_output": "AI 应按 Phase 0 检查输入（注意到只有 Reviewer 意见、缺少 Editor 意见，应询问是否有完整版本）→ Phase 1 输出清单 → Phase 2 输出 Q1-QN 后停止。",
       "files": [],
       "assertions": [
         {
           "type": "must_contain",
           "description": "应检查输入完整性",
-          "check": "AI 识别出输入不完整或缺少 Editor 意见，并询问用户"
+          "check": "AI 识别出缺少 Editor 意见，并询问用户是否有完整返修邮件"
         },
         {
           "type": "must_contain",
           "description": "应输出分类结果",
-          "check": "对每条评论进行类型分类（澄清型/修改型等）"
+          "check": "对每条评论进行类型分类（澄清型/修改型/部分接受/拒绝型/宽泛型）"
         },
         {
           "type": "must_contain",
@@ -57,11 +54,9 @@
     },
     {
       "id": 3,
-      "prompt": "用户之前已经通过此技能生成了 Q1-QN，现在回复如下：\n\nQ1 R1-1: 采纳推荐方案，在 Section I-A 新增 Motivation and Novelty 子节\nQ2 R1-2: 方案 A，仅补充量化论证，拒绝新增 CSI 研究\nQ3 R1-3: 采纳，补充 G=300, N=200, L=20 参数表\nQ4 R1-4: 采纳，统一实线=分析、标记点=仿真\nQ5 R2-1: 采纳，修正摘要中 NOMA vs OMA 声称\nQ6 R2-2: 采纳，澄清 Fig.8 两个机制\nQ7 R3-1: 拒绝，理由：组合创新已有充分论证\nQ8 R3-5: 采纳，新增 EE 小节",
-      "expected_output": "AI 应读取 Q1-QN 的回答 → 生成 response_plan.md → 如有论文原文可继续生成 tex",
-      "files": [
-        "sandbox/tests/test-ieee-mg-response/Latex_Secrecy Communications for ASTARS-NOMA Networks.tex"
-      ],
+      "prompt": "（接续上轮）用户回复如下：\n\nQ1 R1-1: 采纳推荐方案，在 Section I-A 新增 Motivation and Novelty 子节\nQ2 R1-2: 方案 A，仅补充量化论证，拒绝新增 CSI 研究\nQ3 R1-3: 采纳，补充 G=300, N=200, L=20 参数表\nQ4 R1-4: 采纳，统一实线=分析、标记点=仿真\nQ5 R2-1: 采纳，修正摘要中 NOMA vs OMA 声称\nQ6 R2-2: 采纳，澄清 Fig.8 两个机制\nQ7 R3-1: 拒绝，理由：组合创新已有充分论证\nQ8 R3-5: 采纳，新增 EE 小节",
+      "expected_output": "AI 应读取 Q1-QN 的回答 → 生成 response_plan.md（含 Cover Letter + Editor + Reviewer 逐条回复草稿）→ 等待用户确认方案（Phase 4）→ 用户确认后才生成 tex（Phase 5）。不应跳过 Phase 4 直接生成 tex。",
+      "files": [],
       "assertions": [
         {
           "type": "must_contain",
@@ -77,6 +72,75 @@
           "type": "must_contain",
           "description": "拒绝型回复必须有充分理由",
           "check": "Q7 (R3-1) 的回复包含拒绝理由和引用支撑"
+        },
+        {
+          "type": "must_stop",
+          "description": "生成方案后应等待用户确认，不直接生成 tex",
+          "check": "输出以请用户确认方案结尾（Phase 4），未直接产出完整 tex"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "我这里有一段正文修改，帮我检查一下高亮粒度是否合适：\n\n\\textadd{This} simplification \\textadd{allows} for a more tractable \\textadd{yet still practically} meaningful analysis of the \\textadd{region-specific} secrecy performance.",
+      "expected_output": "AI 应识别出这是一句话内 5 处分散的 \\textadd{} 高亮，违反铁律六（高亮粒度三原则），建议合并为整句高亮。",
+      "files": [],
+      "assertions": [
+        {
+          "type": "must_contain",
+          "description": "应识别出粒度过碎的问题",
+          "check": "AI 指出一句话内多处分散高亮违反高亮粒度原则"
+        },
+        {
+          "type": "must_contain",
+          "description": "应给出合并为整句的建议",
+          "check": "AI 建议改为一个 \\textadd{} 包裹整句"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "审稿人建议删除我们论文中这句话：\"This simplification allows for a more tractable yet still practically meaningful analysis.\" 我已经从正文里删掉了。帮我在 Response 里写一下这个改动。",
+      "expected_output": "AI 应按铁律七处理——这是纯删除（信息消失），Response 中应使用叙述文字说明（引用被删原文 + 删除理由），不使用蓝色高亮。",
+      "files": [],
+      "assertions": [
+        {
+          "type": "must_contain",
+          "description": "应使用叙述说明而非蓝色高亮",
+          "check": "Response 文本用叙述句说明删除，未对删除内容使用 \\RevisedExcerpt 或 \\textcolor"
+        },
+        {
+          "type": "must_contain",
+          "description": "应引用被删原文",
+          "check": "说明中提到被删除的原文内容（而非仅写 we have removed it）"
+        },
+        {
+          "type": "must_contain",
+          "description": "应给出删除理由或交叉引用",
+          "check": "说明中包含删除原因或指向其他已覆盖该内容的位置"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "我刚把 R2-C3 的摘录内容改了：公式里加了 \\varsigma 上标，还把 \"EE\" 改成了 \"secrecy energy efficiency\"。请你同步一下相关位置。",
+      "expected_output": "AI 应按传导同步矩阵（workflow Phase 7.4）检查并同步：① Response 摘录 ② 正文对应 \\textadd{} ③ Response 叙述段落中的同一表述。",
+      "files": [],
+      "assertions": [
+        {
+          "type": "must_contain",
+          "description": "应检查 Response 叙述段落的同步",
+          "check": "AI 指出 Response 段落中的 EE 缩写也需改为全称"
+        },
+        {
+          "type": "must_contain",
+          "description": "应检查正文对应位置的同步",
+          "check": "AI 确认正文对应 \\textadd{} 块是否需要同样修改"
+        },
+        {
+          "type": "must_contain",
+          "description": "应先报告发现再等确认",
+          "check": "AI 先列出传导同步清单并等待用户确认，不直接执行写入"
         }
       ]
     }

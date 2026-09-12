@@ -151,25 +151,23 @@ highlighted in \textcolor[rgb]{0.00,0.00,1.00}{blue}.
 
 ### 段头（正式格式，语料实测）
 
-语料中 Reviewer 段落的开头采用**5 行居中块**，包含期刊名、稿件 ID、论文标题、回复标识和作者列表：
+语料中 Reviewer 段落的开头采用**居中块**，包含期刊名、稿件 ID、论文标题、回复标识（含轮次后缀）和作者列表：
 
 ```latex
 \begin{center}
-{\normalsize IEEE Transactions on Wireless Communications}\\
-{\normalsize Paper ID: [稿件编号]}\\
-{\normalsize [Full Paper Title]}\\
-{\normalsize [Author List]}\\
-{\normalsize \textbf{Authors' Response to Reviewer [N]}}
+\textbf{\Large{IEEE Transactions on [Journal Name]\\
+ID [稿件ID]\\[0.3cm]
+[论文标题] \\[0.3cm]
+Authors' Response to Reviewer [N].R[M]\\}
+}
+\vspace{0.3cm}
+\emph{[Author List]}
 \end{center}
-
-\vspace{8pt}
-
-\noindent We sincerely thank the Reviewer for the valuable and
-constructive comments, which have helped us improve the quality
-of this manuscript significantly.
 ```
 
-> **通用简化版**（当不需要展示稿件信息时）：
+> **轮次后缀说明**：`.R1` 表示第一轮大修回复，`.R2` 表示第二轮，以此类推。Editor 段头使用 `Authors' Response to Editor.R[M]`。
+
+> **TWC 简化版**（当不需要展示稿件信息时）：
 > ```latex
 > \begin{center}
 > {\Large \textbf{Response to Reviewer [N]}}

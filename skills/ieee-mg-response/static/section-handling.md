@@ -36,7 +36,7 @@ addresses the Reviewer's concern.
 
 **处理策略**：
 ```latex
-[开场：C1-C6 选择] + [承认可问题] + [说明修改内容] + [引出 quote 块]
+[开场：C1-C13 选择] + [承认问题] + [说明修改内容] + [引出 quote 块]
 
 示例：
 We agree with the Reviewer that this issue requires further
@@ -63,13 +63,33 @@ of the manuscript accordingly.
 
 **处理策略**：
 ```latex
-[开场：E1-E3 选择] + [逐子问题处理]
+[开场：E1-E4 选择] + [逐子问题处理]
 
 示例：
 We appreciate the Reviewer's constructive comment. For the first
 part regarding [A], we have [具体修改]. For the second part
 regarding [B], we respectfully note that [拒绝理由].
 ```
+
+**多子问题的组织方式**（两种，按子问题性质选择）：
+
+| 方式 | 适用 | 示例结构 |
+|------|------|----------|
+| **编号式 `1) 2) 3)`** | 子问题相互独立、可平行回答 | `1) We would like to point out that...` / `2) Based on point 1), ...` / `3) Likewise, ...` |
+| **序数式 `First/Second/Third`** | 子问题有递进/依赖关系 | `First, ...` / `Second, ...` / `Third, we have corrected...` |
+
+**共同约束**：每个子问题独立成段（空行分隔）；最后一段统一引出 quote 块。
+
+### 跨评论引用惯例
+
+当同一处正文修改回应了多个 comment，或某 comment 的修改连带影响其他 comment 时：
+
+1. **主 comment**（修改的主要归属）：完整展示摘录 + 完整论证
+2. **关联 comment**：展示摘录（内容与主 comment 一致），并在段落中加括号说明：
+   `(The change of X to Y is addressed under Reviewer~N Comment~M.)`
+3. **禁止**在关联 comment 中重复长篇论证（避免两处说法不一致）
+
+**摘录重复是合法的**——不同审稿人提出相似意见，或一个修改覆盖多个意见时，同一高亮文本可在多个 Rx-Cx 下出现。这是特性，不是冗余。
 
 ### 4. 拒绝型（Defense/Rejection）
 审稿人建议不合理，或超出论文范围。
@@ -109,7 +129,7 @@ original approach in the manuscript.
 
 **处理策略**：
 ```latex
-[开场：D1-D5 选择] + [声明逐项检查] + [逐项列举每个修正]
+[开场：D1-D2 选择] + [声明逐项检查] + [逐项列举每个修正]
 
 示例：
 We sincerely apologize for the typographical and grammatical

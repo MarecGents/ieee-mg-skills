@@ -5,7 +5,7 @@ description: >
   覆盖 STAR-RIS、NOMA、RIS、IRS、6G、MIMO、波束赋形、安全通信等课题组核心研究方向。
   当用户提出以下请求时触发：撰写/生成/优化 response letter、回复审稿意见、大修回复、revision response、rebuttal、逐条回复、
   cover letter、response to editor、response to reviewer。
-version: 0.1.1
+version: 0.1.2
 author: MarecGents Group
 ---
 
@@ -16,8 +16,8 @@ author: MarecGents Group
 | 层级 | 加载源 | 说明 |
 |------|--------|------|
 | **共享层** | `../ieee-mg-share/static/` | 全局风格画像、术语表、表达库、逻辑连接词、常见错误、量化基线 |
-| **核心层** | `static/core.md` | Response 撰写核心原则、首句/二句/末句套路、引用逻辑、四铁律 |
-| **工作流层** | `static/workflow.md` | 完整流程（输入检查 → 提取编号 → 分类询问 → 清单输出 → tex 生成） |
+| **核心层** | `static/core.md` | Response 撰写核心原则、首句/二句/末句套路、引用逻辑、七铁律 |
+| **工作流层** | `static/workflow.md` | 完整流程（输入检查 → 提取编号 → 分类询问 → 清单输出 → tex 生成 → Gate 检查 → 交叉验证 → 自检） |
 | **片段层** | `static/section-*.md` | 按评审意见类型和回复环节按需加载的专用模板 |
 
 ## 二、路由协议
@@ -52,10 +52,10 @@ author: MarecGents Group
 | `comment_count` | N（整数） | 从审稿意见数量推断 |
 | `language` | en / zh | 默认 `en` |
 | `paper_type` | journal / conf / mag | 默认 `journal` |
-| `depth` | full / single-comment | 默认 `full` |
+| `depth` | full / single-comment / micro-adjust | 默认 `full`；`micro-adjust` 用于已有草稿的逐处微调 |
 
 ### Step 4：加载匹配片段
-- 始终加载：`section-structure.md`、`section-opening.md`、`section-latex-format.md`
+- 始终加载：`static/core.md`、`static/workflow.md`、`section-structure.md`、`section-opening.md`、`section-latex-format.md`、`section-latex-template.md`
 - 按评论类型加载：
   - 修改型 → `section-modification.md`
   - 评论处理 → `section-handling.md`
@@ -79,6 +79,18 @@ author: MarecGents Group
 4. 生成 `output/Response_[稿件ID].tex`
 5. **交叉验证**：正文 `\textadd{}` ↔ Response 蓝色摘录一致性检查
 6. 最终自检清单
+
+**模式三：micro-adjust（增量微调，长周期项目）**
+适用于：Response 草稿已存在，用户逐处提出调整。
+
+每轮循环：
+1. 用户指定位置（如 "R2-C3 的摘要"）+ 调整要求
+2. AI **只读**调研相关位置（正文高亮 + Response 摘录 + Response 叙述段落）
+3. AI 给出修改方案（含：改动位置、改动内容、传导同步清单）→ **停止等待确认**
+4. 用户确认后执行 → 执行后立即验证三方一致性
+5. 记录本轮改动（可选：维护一个 `response_changelog.md`）
+
+**约束**：每轮只改用户指定的位置，不顺手改其他；传导同步必须在本轮内完成（不可留到"下次一起改"）。
 
 ## 三、决策边界
 
@@ -132,7 +144,7 @@ author: MarecGents Group
 
 ## 五、设计原则
 
-1. **基于课题组真实 Response 语料蒸馏**：所有模板、用语、格式规范均从 2 篇已发表 TWC 论文的 Response Letter（54 条评审意见）中提炼
+1. **基于课题组真实 Response 语料蒸馏**：所有模板、用语、格式规范均从 3 篇论文的 Response Letter（TWC×2 + TGCN×1，共 73 条评审意见）中提炼
 2. **逐条可追溯**：每条回复模板均对应语料中的真实案例，标注来源
 3. **类型区分严格**：澄清 vs 修改 vs 拒绝三类回复策略严格区分，绝不混淆
 4. **格式零误差**：LaTeX 格式规范统一且可直接使用
@@ -140,4 +152,4 @@ author: MarecGents Group
 6. **强制询问不越权**：修改型意见必须经过用户确认，AI 不可私自执行修改
 7. **清单先行不直接写 tex**：先输出 .md 清单文档，确认后再转化为 tex
 8. **输入完整性优先**：不完整的返修意见不可勉强执行，必须先询问完整版本
-9. **文件只读安全约束**：默认情况下不对用户原文执行任何写入操作。仅在用户明确授权修改特定内容、且指定了允许边界后，才可执行有限范围的写入。详见下方「文件操作安全约束」。
+9. **文件只读安全约束**：默认情况下不对用户原文执行任何写入操作。仅在用户明确授权修改特定内容、且指定了允许边界后，才可执行有限范围的写入。详见「文件操作安全约束」。
